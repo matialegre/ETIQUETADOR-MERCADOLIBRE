@@ -1,0 +1,14 @@
+# PASO 12: GUI Commands - PIPELINE 4
+# ==================================
+
+# Instalar dependencias necesarias (si no están instaladas)
+pip install ttkbootstrap websocket-client
+
+# Ejecutar el monitor GUI
+python modules/12_gui.py
+
+# Nota: El GUI se conecta automáticamente a:
+# - Base de datos SQL Server Express (puerto local)
+# - WebSocket en ws://localhost:5000/events/ws (requiere API ejecutándose)
+
+# Para usar sin ttkbootstrap (solo tkinter estándar), no instalar ttkbootstrap

@@ -1,0 +1,33 @@
+{
+  "brand": {
+    "name": "Avanti Indumentaria",
+    "logo": "/images/uploads/1758836345096_logo_avanti_indumentaria_fotor_20250925183824.png"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/avantiindumentaria_?igsh=MTQ1azlyZms5dGJhMg=="
+  },
+  "hero": {
+    "images": [
+      "/images/uploads/banner_3.png",
+      "/images/uploads/banner_2.png"
+    ],
+    "intervalMs": 10000
+  },
+  "categories": [
+    {
+      "title": "Hombre",
+      "image": "/images/uploads/hombre.webp",
+      "href": "catalog?g=Hombre"
+    },
+    {
+      "title": "Mujer",
+      "image": "/images/uploads/mujer.jpeg",
+      "href": "/catalog?g=Mujer"
+    },
+    {
+      "title": "Accesorios",
+      "image": "/images/uploads/unisex.png",
+      "href": "catalog?g=Accesorios"
+    }
+  ]
+}

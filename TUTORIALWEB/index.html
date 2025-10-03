@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tutorial Picking – Mundo Outdoor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__content container">
+      <h1>Guía rápida de Picking</h1>
+      <p>Cómo usar el cliente optimizado para preparar pedidos de forma rápida y sin errores.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="steps">
+      <h2>Pasos</h2>
+
+      <article class="step">
+        <div class="step__txt">
+          <h3>1) Inicio</h3>
+          <p>Vista principal. Mantené el programa abierto. La lista muestra ventas de tu depósito.</p>
+          <ul class="bullets">
+            <li><strong>Amarillo</strong>: venta para pickear y controlar.</li>
+            <li><strong>Verde</strong>: venta ya pickeada (MOV LOCAL hecho). Se mantiene hasta que RANCHO la marque <strong>PRINTED</strong>.</li>
+          </ul>
+        </div>
+        <div class="step__img">
+          <img class="zoomable" src="1.png" alt="Inicio" />
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="step__txt">
+          <h3>2) Nueva venta detectada</h3>
+          <p>Cuando ingresa una venta, aparece la notificación. La fila se suma a la lista sola.</p>
+        </div>
+        <div class="step__img">
+          <img class="zoomable" src="7.png" alt="Nueva venta detectada" />
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="step__txt">
+          <h3>3) Pickear</h3>
+          <p>Presioná <strong>PICKEAR</strong> y escaneá el código de barras. Si coincide con una venta visible, continúa.</p>
+        </div>
+        <div class="step__img">
+          <img class="zoomable" src="2.png" alt="Ventana de pickeo y botón Pickear" />
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="step__txt">
+          <h3>4) Pick OK</h3>
+          <p>Si está bien: <strong>Pick OK – Movimiento registrado en backend</strong>. La fila queda en <strong>VERDE</strong> hasta que RANCHO marque <strong>PRINTED</strong>.</p>
+        </div>
+        <div class="step__img">
+          <img class="zoomable" src="3.png" alt="Pick OK – Movimiento registrado en backend" />
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="step__txt">
+          <h3>5) Separar lo verde</h3>
+          <p>Lo verde indica que está controlado y coincide con lo pedido. Separá esos artículos. Dejará de estar verde cuando en RANCHO lo pickeen/impriman.</p>
+        </div>
+        <div class="step__img">
+          <img class="zoomable" src="4.png" alt="Fila en verde lista para separar" />
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="step__txt">
+          <h3>6) FALLADO</h3>
+          <p>Si un artículo está mal, presioná <strong>FALLADO</strong>, elegí el motivo y Aceptar. Se notifica automáticamente por WhatsApp al responsable.</p>
+        </div>
+        <div class="step__img">
+          <img class="zoomable" src="5.png" alt="Botón FALLADO con motivos" />
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="step__txt">
+          <h3>7) Error de pick</h3>
+          <p>Si escaneás algo que <strong>no corresponde</strong>, verás <strong class="danger">NO ESTÁ PARA PICKEAR</strong>. No se manda nada al backend.</p>
+        </div>
+        <div class="step__img">
+          <img class="zoomable" src="6.png" alt="No está para pickear" />
+        </div>
+      </article>
+    </section>
+
+    <section class="gallery">
+      <h2>Imágenes de referencia</h2>
+      <div class="grid">
+        <figure><img class="zoomable" src="1.png" alt="Inicio" /><figcaption>Inicio</figcaption></figure>
+        <figure><img class="zoomable" src="7.png" alt="Nueva venta" /><figcaption>Nueva venta</figcaption></figure>
+        <figure><img class="zoomable" src="2.png" alt="Pickear" /><figcaption>Pickear</figcaption></figure>
+        <figure><img class="zoomable" src="3.png" alt="Pick OK" /><figcaption>Pick OK</figcaption></figure>
+        <figure><img class="zoomable" src="4.png" alt="Verde para separar" /><figcaption>Verde para separar</figcaption></figure>
+        <figure><img class="zoomable" src="5.png" alt="FALLADO" /><figcaption>FALLADO</figcaption></figure>
+        <figure><img class="zoomable" src="6.png" alt="Error de pick" /><figcaption>Error de pick</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="ack">
+      <h2>Confirmación de lectura</h2>
+      <p>Completá tu nombre y apellido y confirmá que leíste y entendiste este tutorial. Nos llegará una notificación por WhatsApp.</p>
+      <form id="ack-form" class="form">
+        <div class="field">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+        </div>
+        <div class="field">
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required />
+        </div>
+        <div class="field">
+          <label for="local">Nombre del local</label>
+          <input type="text" id="local" name="local" placeholder="MTGBBPS / MONBAHIA / MUNDOAL" required />
+        </div>
+        <div class="field">
+          <label for="anydesk">ID de AnyDesk</label>
+          <input type="text" id="anydesk" name="anydesk" placeholder="Ej: 123 456 789" required />
+        </div>
+        <div class="field">
+          <label for="passdesk">Contraseña de AnyDesk (opcional)</label>
+          <input type="text" id="passdesk" name="passdesk" placeholder="(si la sabés)" />
+        </div>
+        <div class="field field--check">
+          <input type="checkbox" id="acepto" required />
+          <label for="acepto">Confirmo que leí y entendí el tutorial</label>
+        </div>
+        <button type="submit" class="btn">Firmar</button>
+        <p id="ack-status" class="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>© 2025 Mundo Outdoor · Guía de Picking</small>
+    </div>
+  </footer>
+
+  <div id="lightbox" class="lightbox" role="dialog" aria-hidden="true">
+    <div class="lightbox__backdrop"></div>
+    <img class="lightbox__img" alt="ampliada" />
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

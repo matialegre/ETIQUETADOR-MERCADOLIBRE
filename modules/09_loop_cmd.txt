@@ -1,0 +1,11 @@
+# PASO 09: Main Loop Commands
+# ===========================
+
+# Ejecutar 2 ciclos con 5 segundos entre ciclos (para testing)
+python modules/09_main_loop.py --cycles 2 --sleep 5
+
+# Ejecutar loop infinito con 60 segundos entre ciclos (producción)
+python modules/09_main_loop.py --sleep 60
+
+# Ejecutar 1 ciclo solo (testing rápido)
+python modules/09_main_loop.py --cycles 1 --sleep 0

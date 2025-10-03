@@ -1,0 +1,398 @@
+[
+  {
+    "sku": "MBST1",
+    "name": "Sueter Tejido Eugenia Crudo  Sail",
+    "price": 100,
+    "gender": "Mujer",
+    "category": "Sueter",
+    "subcategory": "Tejido",
+    "image": "/images/uploads/sueter_tejido_crudo_eugenia_sail.jpeg",
+    "images": [],
+    "tags": []
+  },
+  {
+    "sku": "RRDMCH1",
+    "name": "Remera Formats RedCross",
+    "price": 29000,
+    "gender": "Hombre",
+    "category": "Remera",
+    "subcategory": "Manga Corta",
+    "image": "/images/uploads/remera_formats_redcross.webp",
+    "images": [
+      "/images/uploads/remera_formats_redcross.webp"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "BXRCH1",
+    "name": "Boxer Color Liso RedCross",
+    "price": 16000,
+    "gender": "Hombre",
+    "category": "Ropa interior",
+    "subcategory": "Boxer",
+    "image": "/images/uploads/boxer_color_liso_redcross.webp",
+    "images": [
+      "/images/uploads/boxer_color_liso_redcross.webp"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "PFRCH1",
+    "name": "Perfume Hombre RedCross",
+    "price": 34999,
+    "gender": "Accesorios",
+    "category": "Perfumes",
+    "subcategory": "",
+    "image": "/images/uploads/perfume_redcross.webp",
+    "images": [
+      "/images/uploads/perfume_redcross.webp"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "RMCR",
+    "name": "Remera Apliquer RedCross",
+    "price": 29000,
+    "gender": "Hombre",
+    "category": "Remera",
+    "subcategory": "Manga Corta",
+    "image": "/images/uploads/remera_apliquer.webp",
+    "images": [
+      "/images/uploads/remera_apliquer.webp"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "RMCR1",
+    "name": "Remera Ancla Redcross",
+    "price": 29000,
+    "gender": "Hombre",
+    "category": "Remera",
+    "subcategory": "Manga Corta",
+    "image": "/images/uploads/remera_ancla.webp",
+    "images": [
+      "/images/uploads/remera_ancla.webp"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "RMCR2",
+    "name": "Remera Boost RedCross",
+    "price": 29000,
+    "gender": "Hombre",
+    "category": "Remera",
+    "subcategory": "Manga Corta",
+    "image": "/images/uploads/remera_boost.webp",
+    "images": [
+      "/images/uploads/remera_boost.webp"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "RMCR3",
+    "name": "Remera Bowie Redcross",
+    "price": 29000,
+    "gender": "Hombre",
+    "category": "Remera",
+    "subcategory": "Manga Corta",
+    "image": "/images/uploads/remera_bowie_redcross.webp"
+  },
+  {
+    "sku": "RMCR4",
+    "name": "Remera  Combinada RedCross",
+    "price": 29000,
+    "gender": "Hombre",
+    "category": "Remera",
+    "subcategory": "Manga Corta",
+    "image": "/images/uploads/remera_chance_redcross.webp",
+    "images": [
+      "/images/uploads/remera_chance_redcross.webp"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "RMCR5",
+    "name": "Remera  Con Botones Redcross",
+    "price": 29000,
+    "gender": "Hombre",
+    "category": "Remera",
+    "subcategory": "Manga Corta",
+    "image": "/images/uploads/remera_combinada_redcross.webp",
+    "images": [
+      "/images/uploads/remera_combinada_redcross.webp"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "RMCR7",
+    "name": "Remera  Surf RedCross",
+    "price": 29000,
+    "gender": "Hombre",
+    "category": "Remera",
+    "subcategory": "Manga Corta",
+    "image": "/images/uploads/remera_surf_redcross.webp",
+    "images": [
+      "/images/uploads/remera_surf_redcross.webp"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "PJR",
+    "name": "Jean Blue Redcross",
+    "price": 89000,
+    "gender": "Hombre",
+    "category": "Jean",
+    "subcategory": "Pantalon",
+    "image": "/images/uploads/jean_blue_redcross.webp"
+  },
+  {
+    "sku": "PJR2",
+    "name": "Jean con Roturas Redcross",
+    "price": 89000,
+    "gender": "Hombre",
+    "category": "Jean",
+    "subcategory": "Pantalon",
+    "image": "/images/uploads/jean_con_roturas_redcross.webp"
+  },
+  {
+    "sku": "PJR3",
+    "name": "Jean Azul Redcross",
+    "price": 89000,
+    "gender": "Hombre",
+    "category": "Jean",
+    "subcategory": "Pantalon",
+    "image": "/images/uploads/jean_azul_redcross.webp"
+  },
+  {
+    "sku": "PJR4",
+    "name": "Jean Meg Redcross",
+    "price": 89000,
+    "gender": "Hombre",
+    "category": "Jean",
+    "subcategory": "Pantalon",
+    "image": "/images/uploads/jean_meg_redcross.webp",
+    "images": [
+      "/images/uploads/jean_meg_redcross.webp",
+      "/images/uploads/jean_meg_redcross.webp"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "PJR5",
+    "name": "Jean Negro SW Redcross",
+    "price": 89000,
+    "gender": "Hombre",
+    "category": "Jean",
+    "subcategory": "Pantalon",
+    "image": "/images/uploads/jean_negro_sw_redcross.webp",
+    "images": [
+      "/images/uploads/jean_negro_sw_redcross.webp"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "PJR6",
+    "name": "Jean Regular Covain Redcross",
+    "price": 89000,
+    "gender": "Hombre",
+    "category": "Jean",
+    "subcategory": "Pantalon",
+    "image": "/images/uploads/jean_regular_covain_redcross.webp",
+    "images": [
+      "/images/uploads/pjr6.webp"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "PJR8",
+    "name": "Jean Corderoy Carpintero Redcross",
+    "price": 89000,
+    "gender": "Hombre",
+    "category": "Jean",
+    "subcategory": "Pantalon",
+    "image": "/images/uploads/jean_corderoy_carpintero_redcross.jpg",
+    "images": [
+      "/images/uploads/jean_corderoy_carpintero_redcross.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "PJR9",
+    "name": "Jean Baggy Redcross",
+    "price": 89000,
+    "gender": "Hombre",
+    "category": "Jean",
+    "subcategory": "Pantalon",
+    "image": "/images/uploads/jean_baggy_redcross.jpg",
+    "images": [],
+    "tags": []
+  },
+  {
+    "sku": "RMCR8",
+    "name": "Remera Change Redcross",
+    "price": 29000,
+    "gender": "Hombre",
+    "category": "Remera",
+    "subcategory": "Manga Corta",
+    "image": "/images/uploads/remera_chance_redcross.webp",
+    "images": [
+      "/images/uploads/remera_chance_webp.webp"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "BJR",
+    "name": "Bermuda Jean con Roturas Redcross",
+    "price": 69000,
+    "gender": "Hombre",
+    "category": "Bermuda",
+    "subcategory": "Jean",
+    "image": "/images/uploads/bermuda_jean_con_roturas_redcross.webp",
+    "images": [
+      "/images/uploads/bermuda_jean_con_roturas_redcross.webp"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "BAR",
+    "name": "Buzo Paris Redcross",
+    "price": 69000,
+    "gender": "Hombre",
+    "category": "Buzo",
+    "subcategory": "Algodon",
+    "image": "/images/uploads/buzo_paris_redcross.jpg",
+    "images": [
+      "/images/uploads/buzo.jpg"
+    ],
+    "tags": [
+      "Buzo",
+      "Algodon",
+      "Capucha",
+      "Cuello Redondo",
+      "Cierre"
+    ]
+  },
+  {
+    "sku": "BAR1",
+    "name": "Buzo Ucla Redcross",
+    "price": 69000,
+    "gender": "Hombre",
+    "category": "Buzo",
+    "subcategory": "Algodon",
+    "image": "/images/uploads/buzo_ucla_redcross.jpg"
+  },
+  {
+    "sku": "BAR2",
+    "name": "Buzo Yacht Redcross",
+    "price": 69000,
+    "gender": "Hombre",
+    "category": "Buzo",
+    "subcategory": "Algodon",
+    "image": "/images/uploads/buzo_yacht_redcross.jpg"
+  },
+  {
+    "sku": "CAR",
+    "name": "Campera Algodon con Logo Redcross",
+    "price": 69000,
+    "gender": "Hombre",
+    "category": "Camperas",
+    "subcategory": "Algodon",
+    "image": "/images/uploads/campera_algodon_con_logo_redcross.jpg"
+  },
+  {
+    "sku": "CAR1",
+    "name": "Campera Algodon Reno Redcross",
+    "price": 69000,
+    "gender": "Hombre",
+    "category": "Camperas",
+    "subcategory": "Algodon",
+    "image": "/images/uploads/campera_algodon_reno_redcross.webp"
+  },
+  {
+    "sku": "CAM",
+    "name": "Camisa Basica Lisa Spandex Redcross",
+    "price": 69000,
+    "gender": "Hombre",
+    "category": "Camisa",
+    "subcategory": "Algodon",
+    "image": "/images/uploads/camisa_basica_lisa_spandex_redcross.webp",
+    "images": [
+      "/images/uploads/campera_algodon_reno_redcross.webp"
+    ],
+    "tags": [
+      "camisa",
+      "basica",
+      "lisa",
+      "vestir",
+      "sport"
+    ]
+  },
+  {
+    "sku": "STL",
+    "name": "Sweater Tejido Dana Sail",
+    "price": 149000,
+    "gender": "Mujer",
+    "category": "Sweater",
+    "subcategory": "",
+    "image": "/images/uploads/sweater_tejido_dana_sail.webp",
+    "images": [],
+    "tags": []
+  },
+  {
+    "sku": "STL2",
+    "name": "Sweater Tejido Candela Sail",
+    "price": 159000,
+    "gender": "Mujer",
+    "category": "Sweater",
+    "subcategory": "",
+    "image": "/images/uploads/sweater_tejido_candela_sail.webp",
+    "images": [],
+    "tags": []
+  },
+  {
+    "sku": "STL3",
+    "name": "Sweater Tejido Camelia Sail",
+    "price": 120000,
+    "gender": "Mujer",
+    "category": "Sweater",
+    "subcategory": "",
+    "image": "/images/uploads/sweater_tejido_camelia_sail.webp",
+    "images": [
+      "/images/uploads/sweater_tejido_camelia_sail.webp"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "STL4",
+    "name": "Sweater Tejido Ailen Sail",
+    "price": 149000,
+    "gender": "Mujer",
+    "category": "Sweater",
+    "subcategory": "",
+    "image": "/images/uploads/sweater_tejido_ailen_sail.webp",
+    "images": [],
+    "tags": []
+  },
+  {
+    "sku": "STL5",
+    "name": "Sweater Lanilla Luna Sail",
+    "price": 69000,
+    "gender": "Mujer",
+    "category": "Sweater",
+    "subcategory": "",
+    "image": "/images/uploads/sweater_lanilla_luna_sail.webp",
+    "images": [],
+    "tags": []
+  },
+  {
+    "sku": "STL6",
+    "name": "Rompevientos Leonor Sail",
+    "price": 105000,
+    "gender": "Mujer",
+    "category": "Campera",
+    "subcategory": "Rompevientos",
+    "image": "/images/uploads/rompevientos_leonor_sail.webp",
+    "images": [],
+    "tags": []
+  }
+]

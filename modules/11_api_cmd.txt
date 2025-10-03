@@ -1,0 +1,28 @@
+# PASO 11: API Commands - PIPELINE 4
+# ==================================
+
+# Iniciar la API robusta para picking (IP pública, puerto 5000)
+python modules/11_api.py
+
+# Test: Confirmar picking de una orden
+curl -X POST http://localhost:5000/api/pick/confirm -H "Content-Type: application/json" -d "{\"order_id\":\"2000012577440698\",\"picker_user\":\"juan_picker\"}"
+
+# Test: Obtener órdenes listas para picking
+curl http://localhost:5000/api/orders/ready_for_picking
+
+# Test: Obtener detalles de una orden específica
+curl http://localhost:5000/api/orders/2000012577440698/details
+
+# Test: Confirmar múltiples órdenes (bulk)
+curl -X POST http://localhost:5000/api/pick/bulk_confirm -H "Content-Type: application/json" -d "{\"order_ids\":[\"2000012577440698\",\"2000012577440699\"],\"picker_user\":\"maria_picker\"}"
+
+# Test: Estadísticas del sistema
+curl http://localhost:5000/api/stats
+
+# Test: Health check
+curl http://localhost:5000/health
+
+# Conectar WebSocket para eventos en tiempo real
+wscat -c ws://localhost:5000/events/ws
+
+# Para producción con IP pública, cambiar localhost por tu IP pública

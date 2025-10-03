@@ -1,0 +1,1 @@
+pytest tests/test_01_meli_client.py

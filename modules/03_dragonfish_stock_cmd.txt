@@ -1,0 +1,31 @@
+# Comandos para PASO 03: Dragonfish Stock Integration
+
+# 1. Ejecutar módulo principal (testing)
+python modules/03_dragonfish_stock.py
+
+# 2. Ejecutar tests unitarios
+pytest tests/test_03_dragonfish_stock.py -v
+
+# 3. Test específico de consulta de stock
+python -c "
+from modules.03_dragonfish_stock import DragonfishStockManager
+manager = DragonfishStockManager()
+result = manager.get_stock_by_sku('NYS8BESPANNH0-42')
+print('Stock result:', result)
+"
+
+# 4. Test de asignación de órdenes
+python -c "
+from modules.03_dragonfish_stock import DragonfishStockManager
+manager = DragonfishStockManager()
+result = manager.assign_orders_by_stock_priority()
+print('Assignment result:', result)
+"
+
+# 5. Test de sincronización completa
+python -c "
+from modules.03_dragonfish_stock import DragonfishStockManager
+manager = DragonfishStockManager()
+result = manager.sync_ml_orders_with_stock()
+print('Sync result:', result)
+"

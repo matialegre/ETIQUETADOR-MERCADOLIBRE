@@ -1,0 +1,7 @@
+# Requisitos mínimos (usados por el proyecto original)
+pyodbc
+requests
+python-dotenv
+fastapi==0.111.0
+uvicorn[standard]==0.30.0
+SQLAlchemy>=2.0

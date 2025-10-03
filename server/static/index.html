@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MEGA API - Orders Explorer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>MEGA API - Orders Explorer</h1>
+    <div class="row">
+      <label>API Base</label>
+      <input id="apiBase" value="" placeholder="http://127.0.0.1:8080" />
+      <label>Token</label>
+      <input id="apiToken" placeholder="Bearer token" />
+      <button id="btnSaveConf">Guardar</button>
+    </div>
+  </header>
+
+  <section class="filters">
+    <details open>
+      <summary>Filtros</summary>
+      <div class="row">
+        <button id="presetUltimas">Últimas 200</button>
+        <button id="presetRTP">Ready To Print</button>
+        <button id="presetSinAsignar">Sin asignar</button>
+        <button id="presetHoy">De hoy</button>
+      </div>
+      <div class="row">
+        <input id="order_id" placeholder="order_id" />
+        <input id="pack_id" placeholder="pack_id" />
+        <input id="sku" placeholder="sku" />
+        <input id="seller_sku" placeholder="seller_sku" />
+        <input id="barcode" placeholder="barcode" />
+        <input id="deposito_asignado" placeholder="deposito_asignado" />
+        <input id="shipping_estado" placeholder="shipping_estado" />
+        <input id="shipping_subestado" placeholder="shipping_subestado" />
+      </div>
+      <div class="row">
+        <input id="desde" placeholder="desde (ISO)" />
+        <input id="hasta" placeholder="hasta (ISO)" />
+        <input id="cerrado_desde" placeholder="cerrado_desde (ISO)" />
+        <input id="cerrado_hasta" placeholder="cerrado_hasta (ISO)" />
+        <input id="q_sku" placeholder="q_sku (LIKE)" />
+        <input id="q_barcode" placeholder="q_barcode (LIKE)" />
+        <input id="q_comentario" placeholder="q_comentario (LIKE)" />
+        <input id="q_title" placeholder="q_title (LIKE)" />
+      </div>
+      <div class="row">
+        <label>ready_to_print</label><select id="ready_to_print"><option value="">(cualquiera)</option><option value="1">1</option><option value="0">0</option></select>
+        <label>printed</label><select id="printed"><option value="">(cualquiera)</option><option value="1">1</option><option value="0">0</option></select>
+        <label>agotamiento_flag</label><select id="agotamiento_flag"><option value="">(cualquiera)</option><option value="1">1</option><option value="0">0</option></select>
+        <label>qty</label><input id="qty" type="number" min="0" />
+      </div>
+      <div class="row">
+        <label>sort_by</label><input id="sort_by" placeholder="id" />
+        <label>sort_dir</label><select id="sort_dir"><option>DESC</option><option>ASC</option></select>
+        <label>page</label><input id="page" type="number" value="1" min="1" />
+        <label>limit</label><input id="limit" type="number" value="200" min="1" max="1000" />
+        <label>fields</label><input id="fields" placeholder="*, o coma-separado" />
+        <button id="btnBuscar">Buscar</button>
+        <button id="btnPrintRTP" title="Imprimir Ready To Print filtrado por 'deposito_asignado'">Imprimir RTP (PDF)</button>
+      </div>
+    </details>
+  </section>
+
+  <section>
+    <table id="tbl" class="table"></table>
+    <div id="status"></div>
+  </section>
+
+  <section class="chat">
+    <h2>Chat con IA (contexto de la base) <small><a href="/chat/help" target="_blank" rel="noopener">¿Cómo hablarle?</a></small></h2>
+    <div class="chat-grid">
+      <div class="chat-main">
+        <div id="chatBox" class="chat-box"></div>
+        <div class="row">
+          <select id="chatModel">
+            <option value="deepseek/deepseek-chat">deepseek/deepseek-chat</option>
+            <option value="openai/gpt-4o-mini">openai/gpt-4o-mini</option>
+          </select>
+          <input id="chatInput" placeholder="Preguntale algo (p.ej: \"mostrame el estado del order_id 123456789\")" />
+          <button id="btnChatSend">Enviar</button>
+        </div>
+        <small>La IA agrega un resumen de órdenes relacionadas como contexto automáticamente. La API key se guarda en el servidor.</small>
+      </div>
+      <aside class="chat-tips">
+        <div class="tips-header">
+          <strong>Ejemplos listos para usar</strong>
+        </div>
+        <div id="chatTips" class="tips-list">
+          <!-- Se llena desde /api/chat/tips -->
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section>
+    <h2>Actualizar orden</h2>
+    <div class="row">
+      <input id="u_order_id" placeholder="order_id" />
+      <input id="u_deposito_asignado" placeholder="deposito_asignado" />
+      <input id="u_COMENTARIO" placeholder="COMENTARIO" />
+      <select id="u_mov_depo_hecho"><option value="">mov_depo_hecho</option><option value="1">1</option><option value="0">0</option></select>
+      <input id="u_mov_depo_obs" placeholder="mov_depo_obs" />
+      <input id="u_mov_depo_numero" placeholder="mov_depo_numero" />
+      <select id="u_printed"><option value="">printed</option><option value="1">1</option><option value="0">0</option></select>
+      <select id="u_ready_to_print"><option value="">ready_to_print</option><option value="1">1</option><option value="0">0</option></select>
+      <button id="btnUpdate">Actualizar</button>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "brand": {
+    "name": "Avanti",
+    "logo": "/logo.svg"
+  },
+  "social": {
+    "instagram": "https://instagram.com/avanti"
+  },
+  "hero": {
+    "images": ["/hero.svg", "/hero.svg"],
+    "intervalMs": 5000
+  },
+  "categories": [
+    { "title": "New Arrivals", "image": "/images/placeholder.svg", "href": "/catalog?q=nuevo" },
+    { "title": "Jeans y Pants", "image": "/images/placeholder.svg", "href": "/catalog?c=Jeans" },
+    { "title": "Remeras y Musculosas", "image": "/images/placeholder.svg", "href": "/catalog?c=Remeras" },
+    { "title": "Camperas", "image": "/images/placeholder.svg", "href": "/catalog?c=Camperas" },
+    { "title": "Vestidos", "image": "/images/placeholder.svg", "href": "/catalog?c=Vestidos" },
+    { "title": "Abrigos y Buzos", "image": "/images/placeholder.svg", "href": "/catalog?c=Buzos" }
+  ]
+}

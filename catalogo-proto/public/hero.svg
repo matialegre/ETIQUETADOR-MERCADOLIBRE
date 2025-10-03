@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Hero">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g opacity="0.35">
+    <circle cx="200" cy="150" r="120" fill="#8b5cf6"/>
+    <circle cx="1400" cy="300" r="180" fill="#22d3ee"/>
+    <circle cx="800" cy="700" r="140" fill="#34d399"/>
+  </g>
+  <g fill="#fff" font-family="system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial" text-anchor="middle">
+    <text x="800" y="420" font-size="72" font-weight="800">Catálogo</text>
+    <text x="800" y="480" font-size="28" opacity="0.9">Prototipo de prueba</text>
+  </g>
+</svg>
