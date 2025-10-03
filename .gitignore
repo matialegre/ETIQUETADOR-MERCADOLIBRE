@@ -1,38 +1,33 @@
-# ===== Python / entorno =====
+# Python
 .venv/
-ENV/
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-# ===== Builds / empaquetados (PyInstaller, etc.) =====
+# Node
+node_modules/
+
+# Builds / empaquetados
 build/
 dist/
 *.egg-info/
-*.spec   # <-- si querés versionar los .spec, comentá esta línea
 
-# ===== Logs / cachés / datos locales =====
+# Logs / caches / datos locales
 logs/
 *.log
 *.tmp
 *.cache
 daily_stats_cache.json
 
-# ===== Datos sensibles / tokens =====
-token.json
-
-# ===== Carpeta(s) locales que no querés versionar =====
+# Carpetas locales que no querés subir
 Clientes/
 Clientes - copia/
 MONITOREO CABA/
 
-# ===== Archivos grandes sueltos =====
-*.rar
+# Archivos pesados
 *.zip
+*.rar
 *.7z
 *.tar
 *.tar.gz
-
-# ===== Otros =====
-python   # (ese archivo 0 bytes que tenés)
