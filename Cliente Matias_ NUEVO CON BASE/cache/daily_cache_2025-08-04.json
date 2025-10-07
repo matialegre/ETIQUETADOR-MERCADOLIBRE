@@ -1,0 +1,620 @@
+{
+  "stock_discounts": {},
+  "barcode_cache": {
+    "NWSXB4FGAY-NN0-42": [
+      "NWSXB4FGAY-NN0-42",
+      "NWSXB4FGAY-NN0-42"
+    ],
+    "NWARB0ECYO-NN0-42": [
+      "NWARB0ECYO-NN0-42",
+      "NWARB0ECYO-NN0-42"
+    ],
+    "NRS2B6EBEM-NN0-44": [
+      "NRS2B6EBEM-NN0-44",
+      "NRS2B6EBEM-NN0-44"
+    ],
+    "1251112140-DC10-DC9": [
+      "1251112140-DC10-DC9",
+      "1251112140-DC10-DC9"
+    ],
+    "NMIDKTHZHT-NN0-T41": [
+      "NMIDKTHZHT-NN0-T41",
+      "NMIDKTHZHT-NN0-T41"
+    ],
+    "NMIDBFBBKP-NN0-T36": [
+      "NMIDBFBBKP-NN0-T36",
+      "NMIDBFBBKP-NN0-T36"
+    ],
+    "NDSYDFCTES-TA0-04": [
+      "NDSYDFCTES-TA0-04",
+      "NDSYDFCTES-TA0-04"
+    ],
+    "MZQTA4B803-NN0-03": [
+      "MZQTA4B803-NN0-03",
+      "MZQTA4B803-NN0-03"
+    ],
+    "NMIDKUDATT-NG0-T37": [
+      "NMIDKUDATT-NG0-T37",
+      "NMIDKUDATT-NG0-T37"
+    ],
+    "NDPMA5ACS3-VM0-05": [
+      "NDPMA5ACS3-VM0-05",
+      "NDPMA5ACS3-VM0-05"
+    ],
+    "310091-AN0200-A02": [
+      "310091-AN0200-A02",
+      "310091-AN0200-A02"
+    ],
+    "3252135009-RX24-RXM": [
+      "3252135009-RX24-RXM",
+      "3252135009-RX24-RXM"
+    ],
+    "310091-AN0200-A03": [
+      "310091-AN0200-A03",
+      "310091-AN0200-A03"
+    ],
+    "NPRTB5ECYM-PHA-46": [
+      "NPRTB5ECYM-PHA-46",
+      "NPRTB5ECYM-PHA-46"
+    ],
+    "310033-AN0200-A04": [
+      "310033-AN0200-A04",
+      "310033-AN0200-A04"
+    ],
+    "IABBB0FAC3-CR4-46": [
+      "IABBB0FAC3-CR4-46",
+      "IABBB0FAC3-CR4-46"
+    ],
+    "471195-95-6M": [
+      "471195-95-6M",
+      "471195-95-6M"
+    ],
+    "NMIDKSHKRH-NC0-T44": [
+      "NMIDKSHKRH-NC0-T44",
+      "NMIDKSHKRH-NC0-T44"
+    ],
+    "NDPMB6E773-AGC-52": [
+      "NDPMB6E773-AGC-52",
+      "NDPMB6E773-AGC-52"
+    ],
+    "NDPMB0E770-CR0-50": [
+      "NDPMB0E770-CR0-50",
+      "NDPMB0E770-CR0-50"
+    ],
+    "NDPMB0E770-NN0-46": [
+      "NDPMB0E770-NN0-46",
+      "NDPMB0E770-NN0-46"
+    ],
+    "NDPMB0E770-LMN-52": [
+      "NDPMB0E770-LMN-52",
+      "NDPMB0E770-LMN-52"
+    ],
+    "NPOLA6ACFD-NO0-03": [
+      "NPOLA6ACFD-NO0-03",
+      "NPOLA6ACFD-NO0-03"
+    ],
+    "NDPMA5ACS3-RR0-01": [
+      "NDPMA5ACS3-RR0-01",
+      "NDPMA5ACS3-RR0-01"
+    ],
+    "NDPMA5ACS3-AM0-02": [
+      "NDPMA5ACS3-AM0-02",
+      "NDPMA5ACS3-AM0-02"
+    ],
+    "201-HS500--": "NOT_FOUND",
+    "IHRS1M1TPB-NNR-ST": [
+      "IHRS1M1TPB-NNR-ST",
+      "IHRS1M1TPB-NNR-ST"
+    ],
+    "1251112188-DC01-DCB4": [
+      "1251112188-DC01-DCB4",
+      "1251112188-DC01-DCB4"
+    ],
+    "NMIDBFBBKPOUT": "NOT_FOUND",
+    "NBCTA0DCQU-PIH-05": [
+      "NBCTA0DCQU-PIH-05",
+      "NBCTA0DCQU-PIH-05"
+    ],
+    "NWSXB0ECKK-NN0-44": [
+      "NWSXB0ECKK-NN0-44",
+      "NWSXB0ECKK-NN0-44"
+    ],
+    "NMIDBELZM7-NN0-T38": [
+      "NMIDBELZM7-NN0-T38",
+      "NMIDBELZM7-NN0-T38"
+    ],
+    "1802201-COL010-CS": [
+      "1802201-COL010-CS",
+      "1802201-COL010-CS"
+    ],
+    "NPRTB5ECGM-PK3-46": [
+      "NPRTB5ECGM-PK3-46",
+      "NPRTB5ECGM-PK3-46"
+    ],
+    "IHTXB0EOMG-NN0-46": [
+      "IHTXB0EOMG-NN0-46",
+      "IHTXB0EOMG-NN0-46"
+    ],
+    "474301": "NOT_FOUND",
+    "NMIDKRDJUT": "NOT_FOUND",
+    "NOSEELARTICULO(327)": "NOT_FOUND",
+    "150208-336-A05": [
+      "150208-336-A05",
+      "150208-336-A05"
+    ],
+    "150209": "NOT_FOUND",
+    "NZQTB0FRUB-VSG-48": [
+      "NZQTB0FRUB-VSG-48",
+      "NZQTB0FRUB-VSG-48"
+    ],
+    "1252108040-DC31-DCM": [
+      "1252108040-DC31-DCM",
+      "1252108040-DC31-DCM"
+    ],
+    "NMIDKRHGLD-VM0-T42": [
+      "NMIDKRHGLD-VM0-T42",
+      "NMIDKRHGLD-VM0-T42"
+    ],
+    "4251108006-RV31-02": [
+      "4251108006-RV31-02",
+      "4251108006-RV31-02"
+    ],
+    "NDPMA5ACS3-NN0-05": [
+      "NDPMA5ACS3-NN0-05",
+      "NDPMA5ACS3-NN0-05"
+    ],
+    "IAOXB0FCTL-NN0-52": [
+      "IAOXB0FCTL-NN0-52",
+      "IAOXB0FCTL-NN0-52"
+    ],
+    "IAOXB0FCTL-NN0-50": [
+      "IAOXB0FCTL-NN0-50",
+      "IAOXB0FCTL-NN0-50"
+    ],
+    "NMIDKRDZGX-NN0-T39": [
+      "NMIDKRDZGX-NN0-T39",
+      "NMIDKRDZGX-NN0-T39"
+    ],
+    "NWMYDFBPB9-TA0-03": [
+      "NWMYDFBPB9-TA0-03",
+      "NWMYDFBPB9-TA0-03"
+    ],
+    "NWSXA0AELB-RR0-03": [
+      "NWSXA0AELB-RR0-03",
+      "NWSXA0AELB-RR0-03"
+    ],
+    "1802201-COL877-CS": [
+      "1802201-COL877-CS",
+      "1802201-COL877-CS"
+    ],
+    "NMIDKRNZNJ-AY0-T31": [
+      "NMIDKRNZNJ-AY0-T31",
+      "NMIDKRNZNJ-AY0-T31"
+    ],
+    "IWANC0JCW4-CGC-14": [
+      "IWANC0JCW4-CGC-14",
+      "IWANC0JCW4-CGC-14"
+    ],
+    "NMIDKSDZYH-RS0-T40": [
+      "NMIDKSDZYH-RS0-T40",
+      "NMIDKSDZYH-RS0-T40"
+    ],
+    "NMIDKUDKAN-NC0-T39": [
+      "NMIDKUDKAN-NC0-T39",
+      "NMIDKUDKAN-NC0-T39"
+    ],
+    "1252137005-DC10-DCM": [
+      "1252137005-DC10-DCM",
+      "1252137005-DC10-DCM"
+    ],
+    "NDPMB0E770-AR0-50": [
+      "NDPMB0E770-AR0-50",
+      "NDPMB0E770-AR0-50"
+    ],
+    "NDPMB7E774-AR0-50": [
+      "NDPMB7E774-AR0-50",
+      "NDPMB7E774-AR0-50"
+    ],
+    "1252138018-DC40-U": [
+      "1252138018-DC40-U",
+      "1252138018-DC40-U"
+    ],
+    "NMIDBELZM8-VM0-T41": [
+      "NMIDBELZM8-VM0-T41",
+      "NMIDBELZM8-VM0-T41"
+    ],
+    "NMIDKRDSLS-VE0-T36": [
+      "NMIDKRDSLS-VE0-T36",
+      "NMIDKRDSLS-VE0-T36"
+    ],
+    "NPRTB5ECYM-PFU-48": [
+      "NPRTB5ECYM-PFU-48",
+      "NPRTB5ECYM-PFU-48"
+    ],
+    "NPRTB5ECYM-PHY-50": [
+      "NPRTB5ECYM-PHY-50",
+      "NPRTB5ECYM-PHY-50"
+    ],
+    "IFLO2A0BGS-VFA-ST": [
+      "IFLO2A0BGS-VFA-ST",
+      "IFLO2A0BGS-VFA-ST"
+    ],
+    "APCAGB01--": [
+      "APCAGB01--",
+      "APCAGB01--"
+    ],
+    "150023-725-A03": [
+      "150023-725-A03",
+      "150023-725-A03"
+    ],
+    "NDPPB5ECS2-VI0-50": [
+      "NDPPB5ECS2-VI0-50",
+      "NDPPB5ECS2-VI0-50"
+    ],
+    "NRS2B6EBEM-RAA-46": [
+      "NRS2B6EBEM-RAA-46",
+      "NRS2B6EBEM-RAA-46"
+    ],
+    "NRS2B6EBEM-CR0-46": [
+      "NRS2B6EBEM-CR0-46",
+      "NRS2B6EBEM-CR0-46"
+    ],
+    "NBCTB0ECDY-BWN-42": [
+      "NBCTB0ECDY-BWN-42",
+      "NBCTB0ECDY-BWN-42"
+    ],
+    "150209-373-A01": [
+      "150209-373-A01",
+      "150209-373-A01"
+    ],
+    "NDPMB7E774-NN0-50": [
+      "NDPMB7E774-NN0-50",
+      "NDPMB7E774-NN0-50"
+    ],
+    "NP23A6ABUW-O01-06": [
+      "NP23A6ABUW-O01-06",
+      "NP23A6ABUW-O01-06"
+    ],
+    "NPOLA5ACFC-NO0-03": [
+      "NPOLA5ACFC-NO0-03",
+      "NPOLA5ACFC-NO0-03"
+    ],
+    "NPRTBCGMUN-PHX-52": [
+      "NPRTBCGMUN-PHX-52",
+      "NPRTBCGMUN-PHX-52"
+    ],
+    "NPRTBCGMUN-PID-52": [
+      "NPRTBCGMUN-PID-52",
+      "NPRTBCGMUN-PID-52"
+    ],
+    "IHTXB0FAC6-NN0-48": [
+      "IHTXB0FAC6-NN0-48",
+      "IHTXB0FAC6-NN0-48"
+    ],
+    "NDPMB0ECF1-VEL-50": [
+      "NDPMB0ECF1-VEL-50",
+      "NDPMB0ECF1-VEL-50"
+    ],
+    "NDPMA6ABA5-AGC-03": [
+      "NDPMA6ABA5-AGC-03",
+      "NDPMA6ABA5-AGC-03"
+    ],
+    "NDPMA6ABA5-NN0-03": [
+      "NDPMA6ABA5-NN0-03",
+      "NDPMA6ABA5-NN0-03"
+    ],
+    "NDPMB6E773-NN0-50": [
+      "NDPMB6E773-NN0-50",
+      "NDPMB6E773-NN0-50"
+    ],
+    "3252135008-RX10-RXS": [
+      "3252135008-RX10-RXS",
+      "3252135008-RX10-RXS"
+    ],
+    "1251112188-DC01-DCB6": [
+      "1251112188-DC01-DCB6",
+      "1251112188-DC01-DCB6"
+    ],
+    "NMIDKRDJUT-NN0-T37": [
+      "NMIDKRDJUT-NN0-T37",
+      "NMIDKRDJUT-NN0-T37"
+    ],
+    "417374-74S-4M": [
+      "417374-74S-4M",
+      "417374-74S-4M"
+    ],
+    "NMIDKTDZTN-AY0-T37": [
+      "NMIDKTDZTN-AY0-T37",
+      "NMIDKTDZTN-AY0-T37"
+    ],
+    "NMIDKSHZYM-VM0-T40": [
+      "NMIDKSHZYM-VM0-T40",
+      "NMIDKSHZYM-VM0-T40"
+    ],
+    "13/20010": "NOT_FOUND",
+    "152204-200-A05": [
+      "152204-200-A05",
+      "152204-200-A05"
+    ],
+    "NDPMB6E773-CR0-48": [
+      "NDPMB6E773-CR0-48",
+      "NDPMB6E773-CR0-48"
+    ],
+    "IHTXA0BAC5-N37-03": [
+      "IHTXA0BAC5-N37-03",
+      "IHTXA0BAC5-N37-03"
+    ],
+    "152137-AN0731-A04": [
+      "152137-AN0731-A04",
+      "152137-AN0731-A04"
+    ],
+    "IAOXB0FCTL-NN0-48": [
+      "IAOXB0FCTL-NN0-48",
+      "IAOXB0FCTL-NN0-48"
+    ],
+    "NMIDKSHWAI CTSOUT": "NOT_FOUND",
+    "IAOXB7ECHL-TA0-50": [
+      "IAOXB7ECHL-TA0-50",
+      "IAOXB7ECHL-TA0-50"
+    ],
+    "152138-960-A03": [
+      "152138-960-A03",
+      "152138-960-A03"
+    ],
+    "152136-AN0524-A03": [
+      "152136-AN0524-A03",
+      "152136-AN0524-A03"
+    ],
+    "NFINB6EBTH-NN0-52": [
+      "NFINB6EBTH-NN0-52",
+      "NFINB6EBTH-NN0-52"
+    ],
+    "NWMYDFBPB9-GRV-03": [
+      "NWMYDFBPB9-GRV-03",
+      "NWMYDFBPB9-GRV-03"
+    ],
+    "NDPMB7E774-AR0-46": [
+      "NDPMB7E774-AR0-46",
+      "NDPMB7E774-AR0-46"
+    ],
+    "1261112020-DC10-DC10": [
+      "1261112020-DC10-DC10",
+      "1261112020-DC10-DC10"
+    ],
+    "NDPMB0E770-LMN-48": [
+      "NDPMB0E770-LMN-48",
+      "NDPMB0E770-LMN-48"
+    ],
+    "NDPMB0E770-AGC-46": [
+      "NDPMB0E770-AGC-46",
+      "NDPMB0E770-AGC-46"
+    ],
+    "NDPMB0E770-CR0-48": [
+      "NDPMB0E770-CR0-48",
+      "NDPMB0E770-CR0-48"
+    ],
+    "NMIDKUHZMD-NN0-T41": [
+      "NMIDKUHZMD-NN0-T41",
+      "NMIDKUHZMD-NN0-T41"
+    ],
+    "NMIDKUDZJ7-NPJ-T37": [
+      "NMIDKUDZJ7-NPJ-T37",
+      "NMIDKUDZJ7-NPJ-T37"
+    ],
+    "NPOLB5ECVB-NN0-48": [
+      "NPOLB5ECVB-NN0-48",
+      "NPOLB5ECVB-NN0-48"
+    ],
+    "NMIDKUDATT-NG0-T38": [
+      "NMIDKUDATT-NG0-T38",
+      "NMIDKUDATT-NG0-T38"
+    ],
+    "NMIDKUDATT-NG0-T36": [
+      "NMIDKUDATT-NG0-T36",
+      "NMIDKUDATT-NG0-T36"
+    ],
+    "150030-202-A05": [
+      "150030-202-A05",
+      "150030-202-A05"
+    ],
+    "NMIDKRDIVU-AC0-T37": [
+      "NMIDKRDIVU-AC0-T37",
+      "NMIDKRDIVU-AC0-T37"
+    ],
+    "NPOLC5IDUS-RNU-14": [
+      "NPOLC5IDUS-RNU-14",
+      "NPOLC5IDUS-RNU-14"
+    ],
+    "NPOLA6ACFD-TA0-02": [
+      "NPOLA6ACFD-TA0-02",
+      "NPOLA6ACFD-TA0-02"
+    ],
+    "NFINB6EBKA-RSN-46": [
+      "NFINB6EBKA-RSN-46",
+      "NFINB6EBKA-RSN-46"
+    ],
+    "NPRTB6ECYL-MCL-52": [
+      "NPRTB6ECYL-MCL-52",
+      "NPRTB6ECYL-MCL-52"
+    ],
+    "NEPLA7ACIE-NN0-05": [
+      "NEPLA7ACIE-NN0-05",
+      "NEPLA7ACIE-NN0-05"
+    ],
+    "NMIDKRDTUT-AH0-T37": [
+      "NMIDKRDTUT-AH0-T37",
+      "NMIDKRDTUT-AH0-T37"
+    ],
+    "NMIDKRDSLS-NN0-T37": [
+      "NMIDKRDSLS-NN0-T37",
+      "NMIDKRDSLS-NN0-T37"
+    ],
+    "NDPPB5ECS2-VI0-46": [
+      "NDPPB5ECS2-VI0-46",
+      "NDPPB5ECS2-VI0-46"
+    ],
+    "NP23A6ABUW-AM0-02": [
+      "NP23A6ABUW-AM0-02",
+      "NP23A6ABUW-AM0-02"
+    ],
+    "417374-74S-4.5M": [
+      "417374-74S-4.5M",
+      "417374-74S-4.5M"
+    ],
+    "471195-95-4.5M": [
+      "471195-95-4.5M",
+      "471195-95-4.5M"
+    ],
+    "IHTXB0ESBC-LR1-44": [
+      "IHTXB0ESBC-LR1-44",
+      "IHTXB0ESBC-LR1-44"
+    ],
+    "NMIDKUDILL-NC0-T39": [
+      "NMIDKUDILL-NC0-T39",
+      "NMIDKUDILL-NC0-T39"
+    ],
+    "150100-200-A04": [
+      "150100-200-A04",
+      "150100-200-A04"
+    ],
+    "1261112019-DC10-DC95": [
+      "1261112019-DC10-DC95",
+      "1261112019-DC10-DC95"
+    ],
+    "152138-300-A03": [
+      "152138-300-A03",
+      "152138-300-A03"
+    ],
+    "NMIDKRHZGW-N37-T42": [
+      "NMIDKRHZGW-N37-T42",
+      "NMIDKRHZGW-N37-T42"
+    ],
+    "NMIDKTHZHT-NN0-T42": [
+      "NMIDKTHZHT-NN0-T42",
+      "NMIDKTHZHT-NN0-T42"
+    ],
+    "NMIDKTHZHT-NN0-T40": [
+      "NMIDKTHZHT-NN0-T40",
+      "NMIDKTHZHT-NN0-T40"
+    ],
+    "NDPPB5ECS2-NN0-48": [
+      "NDPPB5ECS2-NN0-48",
+      "NDPPB5ECS2-NN0-48"
+    ],
+    "IMNGAHAC41-RUN-T2": [
+      "IMNGAHAC41-RUN-T2",
+      "IMNGAHAC41-RUN-T2"
+    ],
+    "NMIDBELZM8-NN0-T43": [
+      "NMIDBELZM8-NN0-T43",
+      "NMIDBELZM8-NN0-T43"
+    ],
+    "NMIDKRDTRP-BB5-T37": [
+      "NMIDKRDTRP-BB5-T37",
+      "NMIDKRDTRP-BB5-T37"
+    ],
+    "NRAQGJUBEH-RN5-E5": [
+      "NRAQGJUBEH-RN5-E5",
+      "NRAQGJUBEH-RN5-E5"
+    ],
+    "471166-66-7.5H": [
+      "471166-66-7.5H",
+      "471166-66-7.5H"
+    ],
+    "IHTXB0ESBC-NN0-48": [
+      "IHTXB0ESBC-NN0-48",
+      "IHTXB0ESBC-NN0-48"
+    ],
+    "115108-360-A03": [
+      "115108-360-A03",
+      "115108-360-A03"
+    ],
+    "1261112021-DC10-DC95": [
+      "1261112021-DC10-DC95",
+      "1261112021-DC10-DC95"
+    ],
+    "NMIDKUDZDWOUT": "NOT_FOUND",
+    "ITHCB0HBB8-LV1-46": [
+      "ITHCB0HBB8-LV1-46",
+      "ITHCB0HBB8-LV1-46"
+    ],
+    "1261112020-DC10-DC9": [
+      "1261112020-DC10-DC9",
+      "1261112020-DC10-DC9"
+    ],
+    "NDPMB0ECF1-RNU-50": [
+      "NDPMB0ECF1-RNU-50",
+      "NDPMB0ECF1-RNU-50"
+    ],
+    "NDPMB0E770-CR0-54": [
+      "NDPMB0E770-CR0-54",
+      "NDPMB0E770-CR0-54"
+    ],
+    "NMIDBELZM8-NN0-T41": [
+      "NMIDBELZM8-NN0-T41",
+      "NMIDBELZM8-NN0-T41"
+    ],
+    "NMIDKUHACG-NN0-T40": [
+      "NMIDKUHACG-NN0-T40",
+      "NMIDKUHACG-NN0-T40"
+    ],
+    "NMIDKRHZSS-VM0-T43": [
+      "NMIDKRHZSS-VM0-T43",
+      "NMIDKRHZSS-VM0-T43"
+    ],
+    "NRS2B6EBEM-A32-44": [
+      "NRS2B6EBEM-A32-44",
+      "NRS2B6EBEM-A32-44"
+    ],
+    "NWQREHGB56-TB0-48": [
+      "NWQREHGB56-TB0-48",
+      "NWQREHGB56-TB0-48"
+    ],
+    "NMIDBELZM8-VM0-T43": [
+      "NMIDBELZM8-VM0-T43",
+      "NMIDBELZM8-VM0-T43"
+    ],
+    "NMIDBELZM8-VM0-T44": [
+      "NMIDBELZM8-VM0-T44",
+      "NMIDBELZM8-VM0-T44"
+    ],
+    "NDPMA6ABA5-AM0-04": [
+      "NDPMA6ABA5-AM0-04",
+      "NDPMA6ABA5-AM0-04"
+    ],
+    "1799241-COL010-CL": [
+      "1799241-COL010-CL",
+      "1799241-COL010-CL"
+    ],
+    "NMIDBELZM8-NN0-T44": [
+      "NMIDBELZM8-NN0-T44",
+      "NMIDBELZM8-NN0-T44"
+    ],
+    "NPRTA5ABDL-PI3-03": [
+      "NPRTA5ABDL-PI3-03",
+      "NPRTA5ABDL-PI3-03"
+    ],
+    "NMIDKRDTMQ-BLQ-T37": [
+      "NMIDKRDTMQ-BLQ-T37",
+      "NMIDKRDTMQ-BLQ-T37"
+    ],
+    "NPRTB6ECYL-MCL-46": [
+      "NPRTB6ECYL-MCL-46",
+      "NPRTB6ECYL-MCL-46"
+    ],
+    "NMIDKUDKAN-NNG-T40": [
+      "NMIDKUDKAN-NNG-T40",
+      "NMIDKUDKAN-NNG-T40"
+    ],
+    "NMIDKRNAGW": "NOT_FOUND",
+    "IMNGDND191": [
+      "IMNGDND191-NOM-T3",
+      "IMNGDND191"
+    ],
+    "ITHCA0DBB5": "NOT_FOUND",
+    "NMIDKRDJUE": "NOT_FOUND",
+    "NPFMEIGKAI": "NOT_FOUND"
+  },
+  "picked_items": [],
+  "last_saved": "2025-08-04T14:23:37.883753"
+}

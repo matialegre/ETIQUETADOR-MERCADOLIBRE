@@ -2,9 +2,9 @@
   {
     "sku": "MBST1",
     "name": "Sueter Tejido Eugenia Crudo  Sail",
-    "price": 100,
+    "price": 110000,
     "gender": "Mujer",
-    "category": "Sueter",
+    "category": "Sweater",
     "subcategory": "Tejido",
     "image": "/images/uploads/sueter_tejido_crudo_eugenia_sail.jpeg",
     "images": [],
@@ -260,7 +260,7 @@
     "gender": "Hombre",
     "category": "Buzo",
     "subcategory": "Algodon",
-    "image": "/images/uploads/buzo_paris_redcross.jpg",
+    "image": "/images/uploads/1759531999569_buzo_paris_redcross.jpg",
     "images": [
       "/images/uploads/buzo.jpg"
     ],
@@ -279,7 +279,9 @@
     "gender": "Hombre",
     "category": "Buzo",
     "subcategory": "Algodon",
-    "image": "/images/uploads/buzo_ucla_redcross.jpg"
+    "image": "/images/uploads/1759532032217_buzo_ucla_redcross.jpg",
+    "images": [],
+    "tags": []
   },
   {
     "sku": "BAR2",
@@ -288,7 +290,9 @@
     "gender": "Hombre",
     "category": "Buzo",
     "subcategory": "Algodon",
-    "image": "/images/uploads/buzo_yacht_redcross.jpg"
+    "image": "/images/uploads/1759532063229_buzo_yacht_redcross.jpg",
+    "images": [],
+    "tags": []
   },
   {
     "sku": "CAR",
@@ -297,7 +301,9 @@
     "gender": "Hombre",
     "category": "Camperas",
     "subcategory": "Algodon",
-    "image": "/images/uploads/campera_algodon_con_logo_redcross.jpg"
+    "image": "/images/uploads/1759532100559_campera_algodon_con_logo_redcross.jpg",
+    "images": [],
+    "tags": []
   },
   {
     "sku": "CAR1",
@@ -306,7 +312,9 @@
     "gender": "Hombre",
     "category": "Camperas",
     "subcategory": "Algodon",
-    "image": "/images/uploads/campera_algodon_reno_redcross.webp"
+    "image": "/images/uploads/1759532121746_campera_algodon_reno_redcross.jpg",
+    "images": [],
+    "tags": []
   },
   {
     "sku": "CAM",
@@ -317,7 +325,9 @@
     "subcategory": "Algodon",
     "image": "/images/uploads/camisa_basica_lisa_spandex_redcross.webp",
     "images": [
-      "/images/uploads/campera_algodon_reno_redcross.webp"
+      "/images/uploads/campera_algodon_reno_redcross.webp",
+      "/images/uploads/1759532152998_camisa_basica_lisa_spandex_redcross.webp",
+      "/images/uploads/1759532165845_camisa_basica_lisa_spandex_redcross.webp"
     ],
     "tags": [
       "camisa",
@@ -335,7 +345,10 @@
     "category": "Sweater",
     "subcategory": "",
     "image": "/images/uploads/sweater_tejido_dana_sail.webp",
-    "images": [],
+    "images": [
+      "/images/uploads/1759498348379_sweater_tejido_dana_sail.webp",
+      "/images/uploads/1759498361598_sweater_tejido_dana_sail.webp"
+    ],
     "tags": []
   },
   {
@@ -346,42 +359,10 @@
     "category": "Sweater",
     "subcategory": "",
     "image": "/images/uploads/sweater_tejido_candela_sail.webp",
-    "images": [],
-    "tags": []
-  },
-  {
-    "sku": "STL3",
-    "name": "Sweater Tejido Camelia Sail",
-    "price": 120000,
-    "gender": "Mujer",
-    "category": "Sweater",
-    "subcategory": "",
-    "image": "/images/uploads/sweater_tejido_camelia_sail.webp",
     "images": [
-      "/images/uploads/sweater_tejido_camelia_sail.webp"
+      "/images/uploads/1759498725910_sweater_tejido_candela_sail.webp",
+      "/images/uploads/1759498746211_sweater_tejido_candela_sail.webp"
     ],
-    "tags": []
-  },
-  {
-    "sku": "STL4",
-    "name": "Sweater Tejido Ailen Sail",
-    "price": 149000,
-    "gender": "Mujer",
-    "category": "Sweater",
-    "subcategory": "",
-    "image": "/images/uploads/sweater_tejido_ailen_sail.webp",
-    "images": [],
-    "tags": []
-  },
-  {
-    "sku": "STL5",
-    "name": "Sweater Lanilla Luna Sail",
-    "price": 69000,
-    "gender": "Mujer",
-    "category": "Sweater",
-    "subcategory": "",
-    "image": "/images/uploads/sweater_lanilla_luna_sail.webp",
-    "images": [],
     "tags": []
   },
   {
@@ -389,10 +370,517 @@
     "name": "Rompevientos Leonor Sail",
     "price": 105000,
     "gender": "Mujer",
-    "category": "Campera",
-    "subcategory": "Rompevientos",
+    "category": "Rompeviento",
+    "subcategory": "",
     "image": "/images/uploads/rompevientos_leonor_sail.webp",
     "images": [],
+    "tags": []
+  },
+  {
+    "sku": "STL7",
+    "name": "Sweater Lanilla Luna Sail",
+    "price": 69000,
+    "gender": "Mujer",
+    "category": "Sweater",
+    "subcategory": "Lanilla",
+    "image": "/images/uploads/1759498200200_sweater_lanilla_luna_sail.webp",
+    "images": [],
+    "tags": []
+  },
+  {
+    "sku": "STL8",
+    "name": "Sweater Tejido Ailen Sail",
+    "price": 149000,
+    "gender": "Mujer",
+    "category": "Sweater",
+    "subcategory": "Lana",
+    "image": "/images/uploads/1759498515488_sweater_tejido_ailen_sail.webp",
+    "images": [
+      "/images/uploads/1759498454670_sweater_lanilla_luna_sail.webp"
+    ],
+    "tags": [
+      "MUJER",
+      "CAPUCHA"
+    ]
+  },
+  {
+    "sku": "STL9",
+    "name": "Sweater Tejido Candela Sail",
+    "price": 159000,
+    "gender": "Mujer",
+    "category": "Sweater",
+    "subcategory": "Lana",
+    "image": "/images/uploads/1759498891600_sweater_tejido_candela_sail.webp",
+    "images": [
+      "/images/uploads/1759498863022_sweater_tejido_ailen_sail.webp",
+      "/images/uploads/1759498905950_sweater_tejido_candela_sail.webp"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "BAM",
+    "name": "Buzo Algodon Marta Sail",
+    "price": 60000,
+    "gender": "Mujer",
+    "category": "Buzo",
+    "subcategory": "",
+    "image": "/images/uploads/1759499550176_buzo_algodon_marta_sail.webp",
+    "images": [
+      "/images/uploads/1759499550176_buzo_algodon_marta_sail.webp",
+      "/images/uploads/1759499557009_buzo_algodon_marta_sail.webp"
+    ],
+    "tags": [
+      "ALGDON"
+    ]
+  },
+  {
+    "sku": "BAM1",
+    "name": "Chaqueta Selma Sail",
+    "price": 110000,
+    "gender": "Mujer",
+    "category": "Campera",
+    "subcategory": "Chaqueta",
+    "image": "/images/uploads/1759499645328_buzo_algodon_marta_sail.webp",
+    "images": [
+      "/images/uploads/1759499645328_buzo_algodon_marta_sail.webp",
+      "/images/uploads/1759499685022_chaqueta_selma_sail.webp"
+    ],
+    "tags": [
+      "Chaqueta",
+      "Campera"
+    ]
+  },
+  {
+    "sku": "RMC",
+    "name": "Remera Dakota Sail",
+    "price": 45000,
+    "gender": "Mujer",
+    "category": "Remera",
+    "subcategory": "Manga Corta",
+    "image": "/images/uploads/1759500001974_remera.webp",
+    "images": [
+      "/images/uploads/1759500065753_remera_dakota_sail.webp",
+      "/images/uploads/1759500081061_remera_dakota_sail.webp"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "RMC1",
+    "name": "Remera Kira Sail",
+    "price": 49000,
+    "gender": "Mujer",
+    "category": "Remera",
+    "subcategory": "Manga Corta",
+    "image": "/images/uploads/1759500309461_remera_kira_sail.webp",
+    "images": [
+      "/images/uploads/1759500249668_remera.webp",
+      "/images/uploads/1759500320841_remera_kira_sail.webp"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "RMC2",
+    "name": "Remera Filipa Sail",
+    "price": 49000,
+    "gender": "Mujer",
+    "category": "Remera",
+    "subcategory": "Modal",
+    "image": "/images/uploads/1759500710781_remera_filipa_sail.webp",
+    "images": [
+      "/images/uploads/1759500603956_remera_kira_sail.webp"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "RMC3",
+    "name": "Remera Gala Sail",
+    "price": 39000,
+    "gender": "Mujer",
+    "category": "Remera",
+    "subcategory": "",
+    "image": "/images/uploads/1759500939449_remera_shea_sail.webp",
+    "images": [
+      "/images/uploads/1759500937431_remera_shea_sail.webp"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "RMC4",
+    "name": "Remera Shea Sail",
+    "price": 49000,
+    "gender": "Mujer",
+    "category": "Remera",
+    "subcategory": "Manga Corta",
+    "image": "/images/uploads/1759501277166_remera.webp",
+    "images": [
+      "/images/uploads/1759501277166_remera.webp",
+      "/images/uploads/1759501288173_remera.webp"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "RMC5",
+    "name": "Remera Fiona Sail",
+    "price": 49000,
+    "gender": "Mujer",
+    "category": "Remera",
+    "subcategory": "Manga Corta",
+    "image": "/images/uploads/1759501379878_remera_shea_sail.webp",
+    "images": [],
+    "tags": []
+  },
+  {
+    "sku": "RMC6",
+    "name": "Remera Albina Sail",
+    "price": 25000,
+    "gender": "Mujer",
+    "category": "Remera",
+    "subcategory": "Manga Corta",
+    "image": "/images/uploads/1759501447731_remera_fiona_sail.webp",
+    "images": [
+      "/images/uploads/1759501447731_remera_fiona_sail.webp"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "ACC",
+    "name": "Perfume Mujer Sail",
+    "price": 35000,
+    "gender": "Accesorios",
+    "category": "Mujer",
+    "subcategory": "Perfume",
+    "image": "/images/uploads/1759501982131_perfume_sail.webp",
+    "images": [
+      "/images/uploads/1759501905847_remera_albina_sail.webp",
+      "/images/uploads/1759501993572_perfume_sail.webp"
+    ],
+    "tags": [
+      "MUJER",
+      "FRAGANCIAS",
+      "PERFUMES"
+    ]
+  },
+  {
+    "sku": "CIV",
+    "name": "Campera Viyela Cuadros Capucha Redcross",
+    "price": 130000,
+    "gender": "Hombre",
+    "category": "Campera",
+    "subcategory": "",
+    "image": "/images/uploads/1759502933744_campera_viyela_cuadros_redcross_jpg.jpg",
+    "images": [
+      "/images/uploads/1759502922897_campera_viyela_cuadros_redcross_jpg.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "JM",
+    "name": "Jean Boyfriend 515 Celeste Sail",
+    "price": 135000,
+    "gender": "Mujer",
+    "category": "Pantalon",
+    "subcategory": "Jean",
+    "image": "/images/uploads/1759506302005_jean_boyfriend_505_celeste.webp",
+    "images": [
+      "/images/uploads/1759506235104_jean_boyfriend_515_celeste_sail_2_webp.webp",
+      "/images/uploads/1759506312128_jean_boyfriend_505_celeste.webp",
+      "/images/uploads/1759506322031_jean_boyfriend_505_celeste.webp"
+    ],
+    "tags": [
+      "Pantalon",
+      "Jean",
+      "Lona"
+    ]
+  },
+  {
+    "sku": "JM2",
+    "name": "Jean Boyfriend Negro Sail",
+    "price": 110000,
+    "gender": "Mujer",
+    "category": "Pantalon",
+    "subcategory": "Jean",
+    "image": "/images/uploads/1759506507309_jean_boyfriend_negro_sail.webp",
+    "images": [
+      "/images/uploads/1759506454926_jean_boyfriend_515_celeste_sail.webp",
+      "/images/uploads/1759506504238_jean_boyfriend_negro_sail.webp",
+      "/images/uploads/1759506545653_jean_boyfriend_negro_sail.webp"
+    ],
+    "tags": [
+      "Pantalon",
+      "Jean",
+      "Lona"
+    ]
+  },
+  {
+    "sku": "JM4",
+    "name": "Jean Blanco Recto Siena",
+    "price": 99000,
+    "gender": "Mujer",
+    "category": "Pantalon",
+    "subcategory": "Jean",
+    "image": "/images/uploads/1759507820403_jean_boyfriend_negro_sail.jpg",
+    "images": [
+      "/images/uploads/1759507816831_jean_boyfriend_negro_sail.jpg",
+      "/images/uploads/1759507833627_jean_boyfriend_negro_sail.jpg"
+    ],
+    "tags": [
+      "Pantalon",
+      "Jean",
+      "Lona"
+    ]
+  },
+  {
+    "sku": "CMSBSL",
+    "name": "Camisa Buffy Sail",
+    "price": 130000,
+    "gender": "Mujer",
+    "category": "Camisa",
+    "subcategory": "Manga larga",
+    "image": "/images/uploads/1759527855921_imagen_de_whatsapp_2025_10_03_a_las_18_38_58_0aefe8bc_jpg.jpg",
+    "images": [
+      "/images/uploads/1759527855921_imagen_de_whatsapp_2025_10_03_a_las_18_38_58_0aefe8bc_jpg.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "MSCJLN1",
+    "name": "Musculosa Top Decarlo Julien",
+    "price": 65000,
+    "gender": "Mujer",
+    "category": "",
+    "subcategory": "",
+    "image": "/images/uploads/1759528017963_musculosa_top_decarlo_julien.jpg",
+    "images": [
+      "/images/uploads/1759528017963_musculosa_top_decarlo_julien.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "RMMLMJLN",
+    "name": "Remera Marcus Julien",
+    "price": 45000,
+    "gender": "Mujer",
+    "category": "Remera",
+    "subcategory": "Manga larga",
+    "image": "/images/uploads/1759528123684_remera_marcus_julien.jpg",
+    "images": [
+      "/images/uploads/1759528123684_remera_marcus_julien.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "VSTBJLN",
+    "name": "Vestido Roseto Julien",
+    "price": 120000,
+    "gender": "Mujer",
+    "category": "Vestido",
+    "subcategory": "Broderie",
+    "image": "/images/uploads/1759528198822_vestido_roseto_julien.jpg",
+    "images": [
+      "/images/uploads/1759528198822_vestido_roseto_julien.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "VSTNNLS",
+    "name": "Vestido Nila Sail",
+    "price": 89000,
+    "gender": "Mujer",
+    "category": "Vestido",
+    "subcategory": "",
+    "image": "/images/uploads/1759528290804_vestido_nila_sail.jpg",
+    "images": [
+      "/images/uploads/1759528290804_vestido_nila_sail.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "CMSSLEMM",
+    "name": "Camisa Ema Sail",
+    "price": 75000,
+    "gender": "Mujer",
+    "category": "Camisa",
+    "subcategory": "Manga Corta",
+    "image": "/images/uploads/1759528355831_camisa_ema_sail.jpg",
+    "images": [
+      "/images/uploads/1759528362370_camisa_ema_sail.jpg",
+      "/images/uploads/1759528366722_camisa_ema_sail.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "RMNCTZJLN",
+    "name": "Remera Cortez Julien",
+    "price": 45000,
+    "gender": "Mujer",
+    "category": "Remera",
+    "subcategory": "Manga Corta",
+    "image": "/images/uploads/1759528471375_remera_cortez_julien.jpg",
+    "images": [
+      "/images/uploads/1759528471375_remera_cortez_julien.jpg",
+      "/images/uploads/1759528479756_remera_cortez_julien.jpg",
+      "/images/uploads/1759528484729_remera_cortez_julien.jpg",
+      "/images/uploads/1759528488543_remera_cortez_julien.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "RMMCJLNKT",
+    "name": "Remera Katrina Julien",
+    "price": 35000,
+    "gender": "Mujer",
+    "category": "Remera",
+    "subcategory": "Manga Corta",
+    "image": "/images/uploads/1759528567116_remera_katrina_julien.jpg",
+    "images": [
+      "/images/uploads/1759528567116_remera_katrina_julien.jpg",
+      "/images/uploads/1759528578610_remera_katrina_julien.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "RMMCCLSL",
+    "name": "Remera Clara Sail",
+    "price": 52000,
+    "gender": "Mujer",
+    "category": "Remera",
+    "subcategory": "Manga Corta",
+    "image": "/images/uploads/1759528675249_remera_clara_sail.jpg",
+    "images": [
+      "/images/uploads/1759528675249_remera_clara_sail.jpg",
+      "/images/uploads/1759528694173_remera_clara_sail.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "BZCCSAL",
+    "name": "Buzo Tejido Samanta Sail",
+    "price": 69000,
+    "gender": "Mujer",
+    "category": "Buzo",
+    "subcategory": "Con capucha",
+    "image": "/images/uploads/1759528782452_buzo_tejido_samanta_sail.jpg",
+    "images": [
+      "/images/uploads/1759528782452_buzo_tejido_samanta_sail.jpg",
+      "/images/uploads/1759528793558_buzo_tejido_samanta_sail.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "CMSMLARNSL",
+    "name": "Camisa Ariana Sail",
+    "price": 89000,
+    "gender": "Mujer",
+    "category": "Camisa",
+    "subcategory": "Manga larga",
+    "image": "/images/uploads/1759528872152_camisa_ariana_sail.jpg",
+    "images": [
+      "/images/uploads/1759528872152_camisa_ariana_sail.jpg"
+    ],
+    "tags": [
+      "Satinada"
+    ]
+  },
+  {
+    "sku": "CHLDDVSL",
+    "name": "Chaleco Amelia Sail",
+    "price": 125000,
+    "gender": "Mujer",
+    "category": "Chaleco",
+    "subcategory": "",
+    "image": "/images/uploads/1759531642569_chaleco_amelia_sail.jpg",
+    "images": [
+      "/images/uploads/1759531642569_chaleco_amelia_sail.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "CMSSLMLSL",
+    "name": "Camisa Mila Sail",
+    "price": 80000,
+    "gender": "Mujer",
+    "category": "Camisa",
+    "subcategory": "Manga larga",
+    "image": "/images/uploads/1759532274060_camisa_mila_sail.jpg",
+    "images": [
+      "/images/uploads/1759532274060_camisa_mila_sail.jpg",
+      "/images/uploads/1759532279227_camisa_mila_sail.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "RMPVSSILM",
+    "name": "Rompeviento Judy Sail",
+    "price": 79000,
+    "gender": "Mujer",
+    "category": "Rompeviento",
+    "subcategory": "",
+    "image": "/images/uploads/1759532351304_rompeviento_judy_sail.jpg",
+    "images": [
+      "/images/uploads/1759532351304_rompeviento_judy_sail.jpg",
+      "/images/uploads/1759532357565_rompeviento_judy_sail.jpg",
+      "/images/uploads/1759532368751_rompeviento_judy_sail.jpg",
+      "/images/uploads/1759532372488_rompeviento_judy_sail.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "BZATTSLPT",
+    "name": "Buzo Patricia Sail",
+    "price": 99000,
+    "gender": "Mujer",
+    "category": "Buzo",
+    "subcategory": "Medio cierre",
+    "image": "/images/uploads/1759532456079_buzo_patricia_sail.jpg",
+    "images": [
+      "/images/uploads/1759532456079_buzo_patricia_sail.jpg",
+      "/images/uploads/1759532463797_buzo_patricia_sail.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "TPDVJCDM",
+    "name": "Tapado de paño off white Victoria Jess",
+    "price": 120000,
+    "gender": "Mujer",
+    "category": "Tapado",
+    "subcategory": "Paño",
+    "image": "/images/uploads/1759532558343_tapado_de_pano_off_white_victoria_jess.jpg",
+    "images": [
+      "/images/uploads/1759532558343_tapado_de_pano_off_white_victoria_jess.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "JSNK109SL",
+    "name": "Jean Skinny 109 Sail",
+    "price": 110000,
+    "gender": "Mujer",
+    "category": "Pantalon",
+    "subcategory": "Jean",
+    "image": "/images/uploads/1759534104403_jean_skinny_109_sail.webp",
+    "images": [
+      "/images/uploads/1759534104403_jean_skinny_109_sail.webp",
+      "/images/uploads/1759534115467_jean_skinny_109_sail.webp",
+      "/images/uploads/1759534119432_jean_skinny_109_sail.webp",
+      "/images/uploads/1759534135596_jean_skinny_109_sail.webp",
+      "/images/uploads/1759534141055_jean_skinny_109_sail.webp"
+    ],
+    "tags": []
+  },
+  {
+    "sku": "PNSLDTLLS",
+    "name": "Pantalon Donatella Sail",
+    "price": 99000,
+    "gender": "Mujer",
+    "category": "Pantalon",
+    "subcategory": "Engomado",
+    "image": "/images/uploads/1759534298580_pantalon_donatella_sail.webp",
+    "images": [
+      "/images/uploads/1759534298580_pantalon_donatella_sail.webp",
+      "/images/uploads/1759534301837_pantalon_donatella_sail.webp",
+      "/images/uploads/1759534304541_pantalon_donatella_sail.webp"
+    ],
     "tags": []
   }
 ]

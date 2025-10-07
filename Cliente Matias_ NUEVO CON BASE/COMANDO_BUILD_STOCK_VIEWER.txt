@@ -1,0 +1,16 @@
+COMANDO DIRECTO PARA COMPILAR VISOR DE MOVIMIENTOS:
+
+OPCIÓN 1 - CON CONSOLA (para debug):
+pyinstaller --onefile --console --name "Visor_Movimientos_Stock_DEBUG" --clean stock_movements_viewer.py
+
+OPCIÓN 2 - SIN CONSOLA (para producción):
+pyinstaller --onefile --windowed --name "Visor_Movimientos_Stock" --clean stock_movements_viewer.py
+
+OPCIÓN 3 - USAR SCRIPT AUTOMÁTICO:
+python build_stock_viewer.py
+
+NOTAS:
+- El ejecutable se genera en la carpeta "dist"
+- Funciona sin necesidad de tener Python instalado
+- Incluye todas las librerías necesarias (tkinter, requests)
+- Tamaño aproximado: 15-20 MB

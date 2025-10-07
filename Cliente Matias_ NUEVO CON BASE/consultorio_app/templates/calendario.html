@@ -1,0 +1,616 @@
+{% extends "base.html" %}
+
+{% block title %}Calendario - {{ profesional.nombre }} {{ profesional.apellido }}{% endblock %}
+
+{% block content %}
+<div class="container-fluid p-4 fade-in">
+    <!-- Header con navegación -->
+    <div class="row mb-4">
+        <div class="col-md-2 col-12 mb-3 mb-md-0">
+            <a href="{{ url_for('profesionales') }}" class="btn btn-secondary slide-in w-100">
+                <i class="fas fa-arrow-left me-2"></i>ATRÁS
+            </a>
+        </div>
+        <div class="col-md-8 col-12">
+            <div class="calendar-header text-center fade-in">
+                <!-- Navegación semanal -->
+                <div class="d-flex align-items-center justify-content-center mb-3">
+                    <a href="{{ url_for('calendario', profesional_id=profesional.id, year=year_anterior, week=semana_anterior) }}" 
+                       class="btn btn-purple me-4">
+                        <i class="fas fa-chevron-left"></i>
+                        <span class="d-none d-md-inline ms-2">Semana Anterior</span>
+                    </a>
+                    
+                    <div class="mx-4 text-center">
+                        <h1 class="mb-1 fw-bold text-primary">SEMANA {{ week }} - {{ year }}</h1>
+                        <div class="mb-2">
+                            <span class="badge bg-info px-3 py-2 fs-6">
+                                <i class="fas fa-calendar me-2"></i>
+                                {{ semana_info.fecha_inicio.strftime('%d/%m') }} al {{ semana_info.fecha_fin.strftime('%d/%m') }}
+                            </span>
+                        </div>
+                        <div class="professional-info">
+                            <span class="badge bg-primary px-3 py-2 fs-6">
+                                <i class="fas fa-user-md me-2"></i>
+                                {{ profesional.nombre }} {{ profesional.apellido }}
+                            </span>
+                            <span class="badge bg-secondary px-3 py-2 fs-6 ms-2">
+                                {{ profesional.especialidad }}
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <a href="{{ url_for('calendario', profesional_id=profesional.id, year=year_siguiente, week=semana_siguiente) }}" 
+                       class="btn btn-purple ms-4">
+                        <span class="d-none d-md-inline me-2">Semana Siguiente</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Información de la semana -->
+                <div class="row text-center mb-4">
+                    <div class="col-md-3 col-6 mb-2">
+                        <small class="text-muted d-block">Horarios</small>
+                        <strong class="text-primary">8:00 - 18:00</strong>
+                    </div>
+                    <div class="col-md-3 col-6 mb-2">
+                        <small class="text-muted d-block">Días Laborables</small>
+                        <strong class="text-primary">Lun - Vie</strong>
+                    </div>
+                    <div class="col-md-3 col-6 mb-2">
+                        <small class="text-muted d-block">Duración</small>
+                        <strong class="text-primary">60 min</strong>
+                    </div>
+                    <div class="col-md-3 col-6 mb-2">
+                        <small class="text-muted d-block">Semana</small>
+                        <strong class="text-success">{{ week }}/52</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-12"></div>
+    </div>
+
+    <!-- Calendario semanal -->
+    <div class="row">
+        <div class="col-12">
+            <div class="calendar-container">
+                <div class="table-responsive">
+                    <table class="table table-bordered calendar-table">
+                        <thead class="table-primary">
+                            <tr>
+                                <th class="time-column">HORARIO</th>
+                                {% for dia in dias_semana %}
+                                    <th class="day-column text-center">
+                                        <div class="day-header">
+                                            <div class="day-name">{{ dia.weekday_name }}</div>
+                                            <div class="day-number">{{ dia.day }}</div>
+                                            <div class="day-month">{{ dia.month_name[:3] }}</div>
+                                        </div>
+                                    </th>
+                                {% endfor %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for hora in horarios %}
+                            <tr>
+                                <td class="time-column text-center fw-bold">{{ hora }}</td>
+                                {% for dia in dias_semana %}
+                                    {% set fecha_str = dia.date.strftime('%Y-%m-%d') %}
+                                    {% set turno = turnos_organizados.get(fecha_str, {}).get(hora) %}
+                                    
+                                    {% if turno %}
+                                    <!-- Turno asignado con botones de acción -->
+                                    <td class="turno-asignado position-relative">
+                                        <div class="appointment-card">
+                                            <!-- Botones de acción -->
+                                            <div class="action-buttons">
+                                                <button type="button" class="btn btn-sm btn-danger" 
+                                                        onclick="eliminarTurno({{ turno.id }}, '{{ fecha_str }}', '{{ hora }}')" 
+                                                        title="Eliminar turno">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-warning" 
+                                                        onclick="agregarEmergencia('{{ fecha_str }}', '{{ hora }}', {{ profesional.id }})" 
+                                                        title="Turno de emergencia">
+                                                    <i class="fas fa-exclamation-triangle"></i>
+                                                </button>
+                                            </div>
+                                            
+                                            <!-- Información del turno -->
+                                            <div class="appointment-info" 
+                                                 onclick="editarTurno('{{ fecha_str }}', '{{ hora }}', {{ profesional.id }}, {{ turno.usuario_id }})">
+                                                <div class="fw-bold text-dark">{{ turno.usuario.dni }}</div>
+                                                <div class="small">{{ turno.usuario.nombre }}</div>
+                                                <div class="small">{{ turno.usuario.apellido }}</div>
+                                                <div class="small">📞 {{ turno.usuario.telefono }}</div>
+                                                <div class="small">
+                                                    {% if turno.usuario.tiene_obra_social %}
+                                                        <span class="badge bg-success">💚 OS</span>
+                                                    {% else %}
+                                                        <span class="badge bg-warning">💛 Part.</span>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Indicador de emergencia si existe -->
+                                            {% if turno.es_emergencia %}
+                                            <div class="emergency-indicator">
+                                                <div class="small text-white fw-bold">
+                                                    <i class="fas fa-exclamation-triangle me-1"></i>
+                                                    EMERGENCIA
+                                                </div>
+                                                {% if turno.observaciones %}
+                                                <div class="small text-white">
+                                                    {{ turno.observaciones[:30] }}{% if turno.observaciones|length > 30 %}...{% endif %}
+                                                </div>
+                                                {% endif %}
+                                            </div>
+                                            {% endif %}
+                                        </div>
+                                    </td>
+                                    {% else %}
+                                    <!-- Turno libre -->
+                                    <td class="turno-libre" 
+                                        onclick="nuevoTurno('{{ fecha_str }}', '{{ hora }}', {{ profesional.id }})">
+                                        <div class="text-center p-3">
+                                            <i class="fas fa-plus fa-2x mb-2 text-muted"></i>
+                                            <div class="small fw-bold text-muted">Disponible</div>
+                                        </div>
+                                    </td>
+                                    {% endif %}
+                                {% endfor %}
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para nuevo turno / editar turno -->
+<div class="modal fade" id="turnoModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">
+                    <i class="fas fa-calendar-plus me-2"></i>
+                    <span id="modalTitle">Nuevo Turno</span>
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="turnoForm">
+                    <input type="hidden" id="turnoId" name="turno_id">
+                    <input type="hidden" id="profesionalId" name="profesional_id">
+                    <input type="hidden" id="fecha" name="fecha">
+                    <input type="hidden" id="hora" name="hora">
+                    
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold">Fecha y Hora</label>
+                            <div class="p-3 bg-light rounded">
+                                <div class="fw-bold text-primary" id="fechaHoraDisplay"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold">Profesional</label>
+                            <div class="p-3 bg-light rounded">
+                                <div class="fw-bold text-secondary">{{ profesional.nombre }} {{ profesional.apellido }}</div>
+                                <small class="text-muted">{{ profesional.especialidad }}</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label for="dni" class="form-label fw-bold">DNI *</label>
+                            <input type="text" class="form-control form-control-lg" id="dni" name="dni" 
+                                   placeholder="Ingrese DNI" required>
+                            <small class="text-muted">Presione Enter para buscar</small>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="nombre" class="form-label fw-bold">Nombre *</label>
+                            <input type="text" class="form-control form-control-lg" id="nombre" name="nombre" 
+                                   placeholder="Nombre" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="apellido" class="form-label fw-bold">Apellido *</label>
+                            <input type="text" class="form-control form-control-lg" id="apellido" name="apellido" 
+                                   placeholder="Apellido" required>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="telefono" class="form-label fw-bold">Teléfono *</label>
+                            <input type="tel" class="form-control form-control-lg" id="telefono" name="telefono" 
+                                   placeholder="Teléfono" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="obra_social" class="form-label fw-bold">Obra Social</label>
+                            <select class="form-select form-select-lg" id="obra_social" name="obra_social">
+                                <option value="0">Particular</option>
+                                <option value="1">Obra Social</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="col-md-12">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="esEmergencia" name="es_emergencia">
+                                <label class="form-check-label fw-bold text-warning" for="esEmergencia">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>
+                                    Turno de Emergencia
+                                </label>
+                                <small class="d-block text-muted">Los turnos de emergencia se superponen con turnos existentes</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="observaciones" class="form-label fw-bold">Observaciones</label>
+                        <textarea class="form-control" id="observaciones" name="observaciones" 
+                                  rows="3" placeholder="Observaciones adicionales (opcional)"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    <i class="fas fa-times me-2"></i>Cancelar
+                </button>
+                <button type="button" class="btn btn-primary" onclick="confirmarTurno()">
+                    <i class="fas fa-save me-2"></i>Confirmar Turno
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Variables globales
+let editandoTurno = false;
+
+// Función para nuevo turno
+function nuevoTurno(fecha, hora, profesionalId) {
+    editandoTurno = false;
+    document.getElementById('modalTitle').textContent = 'Nuevo Turno';
+    document.getElementById('turnoForm').reset();
+    document.getElementById('turnoId').value = '';
+    document.getElementById('profesionalId').value = profesionalId;
+    document.getElementById('fecha').value = fecha;
+    document.getElementById('hora').value = hora;
+    
+    // Mostrar fecha y hora
+    const fechaObj = new Date(fecha + 'T00:00:00');
+    const fechaFormateada = fechaObj.toLocaleDateString('es-AR', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+    document.getElementById('fechaHoraDisplay').textContent = `${fechaFormateada} - ${hora}`;
+    
+    new bootstrap.Modal(document.getElementById('turnoModal')).show();
+}
+
+// Función para editar turno
+function editarTurno(fecha, hora, profesionalId, usuarioId) {
+    editandoTurno = true;
+    document.getElementById('modalTitle').textContent = 'Editar Turno';
+    document.getElementById('turnoId').value = usuarioId;
+    document.getElementById('profesionalId').value = profesionalId;
+    document.getElementById('fecha').value = fecha;
+    document.getElementById('hora').value = hora;
+    
+    // Mostrar fecha y hora
+    const fechaObj = new Date(fecha + 'T00:00:00');
+    const fechaFormateada = fechaObj.toLocaleDateString('es-AR', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+    document.getElementById('fechaHoraDisplay').textContent = `${fechaFormateada} - ${hora}`;
+    
+    // Cargar datos del turno existente
+    // Aquí podrías hacer una llamada AJAX para obtener los datos del turno
+    
+    new bootstrap.Modal(document.getElementById('turnoModal')).show();
+}
+
+// Función para eliminar turno
+function eliminarTurno(turnoId, fecha, hora) {
+    console.log('Eliminando turno:', turnoId, fecha, hora);
+    
+    if (confirm('¿Estás seguro de que deseas eliminar este turno?')) {
+        fetch('/eliminar_turno/' + turnoId, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+        .then(response => {
+            console.log('Response status:', response.status);
+            return response.json();
+        })
+        .then(data => {
+            console.log('Response data:', data);
+            if (data.success) {
+                alert('Turno eliminado correctamente');
+                location.reload();
+            } else {
+                alert('Error al eliminar el turno: ' + (data.message || 'Error desconocido'));
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error al eliminar el turno: ' + error.message);
+        });
+    }
+}
+
+// Función para agregar turno de emergencia
+function agregarEmergencia(fecha, hora, profesionalId) {
+    console.log('Agregando turno de emergencia:', fecha, hora, profesionalId);
+    
+    // Configurar modal para turno de emergencia
+    document.getElementById('modalTitle').innerHTML = '<i class="fas fa-exclamation-triangle text-warning me-2"></i>Turno de Emergencia';
+    document.getElementById('turnoId').value = '';
+    document.getElementById('profesionalId').value = profesionalId;
+    document.getElementById('fecha').value = fecha;
+    document.getElementById('hora').value = hora;
+    
+    // Limpiar formulario pero mantener valores importantes
+    document.getElementById('turnoForm').reset();
+    document.getElementById('profesionalId').value = profesionalId;
+    document.getElementById('fecha').value = fecha;
+    document.getElementById('hora').value = hora;
+    
+    // Marcar como emergencia y hacer visible
+    const emergenciaCheckbox = document.getElementById('esEmergencia');
+    emergenciaCheckbox.checked = true;
+    emergenciaCheckbox.disabled = true; // No permitir desmarcar en emergencia
+    
+    // Mostrar información de fecha y hora
+    const fechaObj = new Date(fecha + 'T00:00:00');
+    const fechaFormateada = fechaObj.toLocaleDateString('es-ES', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+    document.getElementById('fechaHoraDisplay').innerHTML = `
+        <div class="text-warning fw-bold">
+            <i class="fas fa-exclamation-triangle me-2"></i>
+            EMERGENCIA: ${fechaFormateada} - ${hora}
+        </div>
+        <small class="text-muted">Este turno se agregará sobre el turno existente</small>
+    `;
+    
+    editandoTurno = false;
+    
+    // Mostrar modal
+    new bootstrap.Modal(document.getElementById('turnoModal')).show();
+}
+
+// Auto-completar al escribir DNI
+document.getElementById('dni').addEventListener('keyup', function(e) {
+    if (e.key === 'Enter' || this.value.length >= 7) {
+        buscarUsuario(this.value);
+    }
+});
+
+// Función para buscar usuario por DNI
+function buscarUsuario(dni) {
+    if (!dni) return;
+    
+    fetch(`/buscar_usuario/${dni}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                document.getElementById('nombre').value = data.usuario.nombre;
+                document.getElementById('apellido').value = data.usuario.apellido;
+                document.getElementById('telefono').value = data.usuario.telefono;
+                document.getElementById('obra_social').value = data.usuario.tiene_obra_social ? '1' : '0';
+            } else {
+                // Usuario no encontrado, limpiar campos para nuevo usuario
+                document.getElementById('nombre').value = '';
+                document.getElementById('apellido').value = '';
+                document.getElementById('telefono').value = '';
+                document.getElementById('obra_social').value = '0';
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+// Función para confirmar turno
+function confirmarTurno() {
+    const form = document.getElementById('turnoForm');
+    
+    // Recopilar datos del formulario
+    const turnoData = {
+        profesional_id: parseInt(document.getElementById('profesionalId').value),
+        fecha: document.getElementById('fecha').value,
+        hora: document.getElementById('hora').value,
+        dni: document.getElementById('dni').value,
+        nombre: document.getElementById('nombre').value,
+        apellido: document.getElementById('apellido').value,
+        telefono: document.getElementById('telefono').value,
+        tiene_obra_social: document.getElementById('obra_social').value === '1',
+        es_emergencia: document.getElementById('esEmergencia').checked,
+        observaciones: document.getElementById('observaciones').value
+    };
+    
+    // Validar campos requeridos
+    if (!turnoData.dni || !turnoData.nombre || !turnoData.apellido || !turnoData.telefono) {
+        alert('Por favor complete todos los campos obligatorios');
+        return;
+    }
+    
+    const url = editandoTurno ? '/editar_turno' : '/crear_turno';
+    
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(turnoData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Cerrar modal
+            const modal = bootstrap.Modal.getInstance(document.getElementById('turnoModal'));
+            modal.hide();
+            
+            // Recargar página para mostrar cambios
+            location.reload();
+        } else {
+            alert('Error: ' + data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Error al procesar el turno');
+    });
+}
+</script>
+
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.calendar-table {
+    font-size: 0.9rem;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.calendar-table th {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 8px;
+    border: none;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.calendar-table td {
+    height: 80px;
+    min-width: 150px;
+    border: 1px solid #e0e0e0;
+    padding: 0;
+    vertical-align: top;
+    position: relative;
+}
+
+.time-column {
+    background: #f8f9fa;
+    font-weight: bold;
+    color: var(--primary-color);
+    width: 100px;
+    min-width: 100px;
+}
+
+.turno-asignado {
+    background: linear-gradient(135deg, #d4edda, #c3e6cb);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 100%;
+    border-radius: 8px;
+    margin: 2px;
+}
+
+.turno-asignado:hover {
+    background: linear-gradient(135deg, #c3e6cb, #b8dcc4);
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.turno-libre {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 100%;
+    border-radius: 8px;
+    margin: 2px;
+    border: 2px dashed #dee2e6;
+}
+
+.turno-libre:hover {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-color: var(--primary-color);
+    transform: scale(1.02);
+}
+
+.turno-libre:hover i {
+    color: var(--primary-color) !important;
+    transform: scale(1.1);
+}
+
+.calendar-container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.calendar-header-row th:first-child {
+    border-top-left-radius: 15px;
+}
+
+.calendar-header-row th:last-child {
+    border-top-right-radius: 15px;
+}
+
+.badge {
+    font-size: 0.7rem;
+}
+
+@media (max-width: 768px) {
+    .calendar-table {
+        font-size: 0.8rem;
+    }
+    
+    .calendar-table td {
+        height: 60px;
+        min-width: 120px;
+    }
+    
+    .time-column {
+        width: 80px;
+        min-width: 80px;
+    }
+}
+
+.professional-info .badge {
+    font-size: 0.9rem;
+}
+
+.calendar-header {
+    margin-bottom: 2rem;
+}
+
+.btn-purple {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-purple:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    color: white;
+}
+</style>
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Login - Sistema de Turnos{% endblock %}
+
+{% block content %}
+<div class="main-container">
+    <div class="card card-custom fade-in" style="width: 450px; max-width: 90vw;">
+        <div class="card-body text-center p-5">
+            <!-- Logo/Icono principal -->
+            <div class="purple-element mx-auto mb-4 pulse" style="width: 140px; height: 140px; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-stethoscope" style="font-size: 70px;"></i>
+            </div>
+            
+            <h1 class="mb-2 fw-bold" style="color: var(--text-primary);">Sistema de Turnos</h1>
+            <p class="text-muted mb-4 fs-5">Consultorio de Fonoaudiología</p>
+            <div class="mb-4">
+                <span class="badge bg-light text-dark px-3 py-2">
+                    <i class="fas fa-calendar-check me-2"></i>
+                    Gestión Profesional de Citas
+                </span>
+            </div>
+            
+            {% if error %}
+            <div class="alert alert-danger border-0 rounded-3 slide-in" role="alert">
+                <i class="fas fa-exclamation-triangle me-2"></i>
+                {{ error }}
+            </div>
+            {% endif %}
+            
+            <form method="POST" action="{{ url_for('do_login') }}" class="slide-in">
+                <div class="mb-4">
+                    <div class="purple-element p-3 mb-3">
+                        <i class="fas fa-user me-2"></i>
+                        <span class="fw-semibold">Usuario</span>
+                    </div>
+                    <input type="text" class="form-control form-control-lg" name="usuario" placeholder="Ingrese su usuario" required autocomplete="username">
+                </div>
+                
+                <div class="mb-4">
+                    <div class="purple-element p-3 mb-3">
+                        <i class="fas fa-lock me-2"></i>
+                        <span class="fw-semibold">Contraseña</span>
+                    </div>
+                    <input type="password" class="form-control form-control-lg" name="password" placeholder="Ingrese su contraseña" required autocomplete="current-password">
+                </div>
+                
+                <button type="submit" class="btn btn-purple w-100 btn-lg mb-4">
+                    <i class="fas fa-sign-in-alt me-2"></i>
+                    Iniciar Sesión
+                </button>
+            </form>
+            
+            <div class="mt-4">
+                <div class="card" style="background: rgba(var(--primary-color), 0.1); border: none;">
+                    <div class="card-body p-3">
+                        <h6 class="card-title mb-2">
+                            <i class="fas fa-info-circle me-2 text-primary"></i>
+                            Credenciales de Acceso
+                        </h6>
+                        <div class="row text-center">
+                            <div class="col-6">
+                                <small class="text-muted d-block">Usuario</small>
+                                <code class="fs-6">secretario</code>
+                            </div>
+                            <div class="col-6">
+                                <small class="text-muted d-block">Contraseña</small>
+                                <code class="fs-6">admin123</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

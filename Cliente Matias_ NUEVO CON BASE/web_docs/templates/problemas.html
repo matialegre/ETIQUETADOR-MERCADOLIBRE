@@ -1,0 +1,295 @@
+{% extends "base.html" %}
+
+{% block title %}Solución de Problemas - Mundo Outdoor Sistema{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1><i class="bi bi-question-circle"></i> Solución de Problemas</h1>
+                <p class="lead">Encuentra respuestas rápidas a los problemas más comunes</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Solutions -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center mb-4">Problemas Más Comunes</h2>
+                
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card border-danger">
+                            <div class="card-header bg-danger text-white">
+                                <h5><i class="bi bi-x-circle"></i> "NO ESTÁ PARA PICKEAR"</h5>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Causas:</strong></p>
+                                <ul class="small">
+                                    <li>Producto de otro depósito</li>
+                                    <li>Pedido ya procesado</li>
+                                    <li>Estado incorrecto</li>
+                                    <li>Filtros activos</li>
+                                </ul>
+                                <p><strong>Solución:</strong></p>
+                                <ol class="small">
+                                    <li>Verificar filtros de depósito</li>
+                                    <li>Comprobar estado del pedido</li>
+                                    <li>Buscar manualmente por número</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="card border-warning">
+                            <div class="card-header bg-warning text-dark">
+                                <h5><i class="bi bi-database-x"></i> Error SQL Server</h5>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Síntomas:</strong></p>
+                                <ul class="small">
+                                    <li>"Login failed"</li>
+                                    <li>"Server not found"</li>
+                                    <li>"Connection timeout"</li>
+                                </ul>
+                                <p><strong>Solución:</strong></p>
+                                <ol class="small">
+                                    <li>Verificar servicio SQL ejecutándose</li>
+                                    <li>Comprobar firewall (puerto 1433)</li>
+                                    <li>Revisar credenciales</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="card border-info">
+                            <div class="card-header bg-info text-white">
+                                <h5><i class="bi bi-printer"></i> Impresora No Detectada</h5>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Verificar:</strong></p>
+                                <ul class="small">
+                                    <li>Impresora encendida</li>
+                                    <li>Drivers instalados</li>
+                                    <li>Configurada como predeterminada</li>
+                                    <li>Compatible ZPL</li>
+                                </ul>
+                                <p><strong>Solución:</strong></p>
+                                <ol class="small">
+                                    <li>Reinstalar drivers</li>
+                                    <li>Configurar como predeterminada</li>
+                                    <li>Probar impresión de prueba</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="card border-success">
+                            <div class="card-header bg-success text-white">
+                                <h5><i class="bi bi-speedometer"></i> GUI Lenta</h5>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Causas:</strong></p>
+                                <ul class="small">
+                                    <li>Demasiados pedidos cargados</li>
+                                    <li>Operaciones de BD lentas</li>
+                                    <li>Generación de PDF pesada</li>
+                                </ul>
+                                <p><strong>Solución:</strong></p>
+                                <ol class="small">
+                                    <li>Usar filtros más específicos</li>
+                                    <li>Reiniciar aplicación</li>
+                                    <li>Cerrar otras aplicaciones</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Detailed Troubleshooting -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center mb-4">Guía Detallada de Problemas</h2>
+                
+                <div class="accordion" id="troubleshootingAccordion">
+                    <!-- Conexión Problems -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#conexion-problems">
+                                <i class="bi bi-wifi-off text-danger me-2"></i>
+                                Problemas de Conexión
+                            </button>
+                        </h2>
+                        <div id="conexion-problems" class="accordion-collapse collapse show" data-bs-parent="#troubleshootingAccordion">
+                            <div class="accordion-body">
+                                <h6>SQL Server:</h6>
+                                <p>Para verificar conectividad:</p>
+                                <pre class="bg-dark text-light p-2 rounded">Test-NetConnection 192.168.1.14 -Port 1433</pre>
+                                
+                                <h6>API Dragonfish:</h6>
+                                <p>Probar acceso:</p>
+                                <pre class="bg-dark text-light p-2 rounded">ping 190.211.201.217</pre>
+                                
+                                <h6>Soluciones comunes:</h6>
+                                <ul>
+                                    <li>Verificar firewall y puertos</li>
+                                    <li>Comprobar credenciales</li>
+                                    <li>Revisar conexión VPN si aplica</li>
+                                    <li>Contactar administrador de red</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Picking Problems -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#picking-problems">
+                                <i class="bi bi-upc-scan text-warning me-2"></i>
+                                Problemas de Picking
+                            </button>
+                        </h2>
+                        <div id="picking-problems" class="accordion-collapse collapse" data-bs-parent="#troubleshootingAccordion">
+                            <div class="accordion-body">
+                                <h6>SKUs con sufijo "OUT":</h6>
+                                <p>El sistema resuelve automáticamente SKUs como NMIDKUDZDWOUT al SKU real usando seller_custom_field.</p>
+                                
+                                <h6>Códigos de barras especiales:</h6>
+                                <table class="table table-sm">
+                                    <tr><td>7798333733209</td><td>→</td><td>APCAGB01--</td></tr>
+                                    <tr><td>101-350-ML</td><td>→</td><td>101-W350-WML</td></tr>
+                                </table>
+                                
+                                <h6>Packs multiventa:</h6>
+                                <ul>
+                                    <li>Se muestran en color violeta</li>
+                                    <li>Todos los artículos tienen la misma nota</li>
+                                    <li>Se procesan como una unidad</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Printing Problems -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#printing-problems">
+                                <i class="bi bi-printer text-info me-2"></i>
+                                Problemas de Impresión
+                            </button>
+                        </h2>
+                        <div id="printing-problems" class="accordion-collapse collapse" data-bs-parent="#troubleshootingAccordion">
+                            <div class="accordion-body">
+                                <h6>Error HTTP 400:</h6>
+                                <p>En v3.0 se solucionó reordenando el flujo: la impresión se realiza ANTES de movimientos de stock.</p>
+                                
+                                <h6>Impresora no detectada:</h6>
+                                <ol>
+                                    <li>Verificar que esté encendida y conectada</li>
+                                    <li>Instalar drivers correctos</li>
+                                    <li>Configurar como predeterminada</li>
+                                    <li>Verificar compatibilidad ZPL</li>
+                                </ol>
+                                
+                                <h6>Etiqueta incorrecta:</h6>
+                                <p>El sistema prioriza órdenes por depósito, estado y fecha para evitar confusiones.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- General Problems -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#general-problems">
+                                <i class="bi bi-gear text-success me-2"></i>
+                                Problemas Generales
+                            </button>
+                        </h2>
+                        <div id="general-problems" class="accordion-collapse collapse" data-bs-parent="#troubleshootingAccordion">
+                            <div class="accordion-body">
+                                <h6>Rendimiento lento:</h6>
+                                <ul>
+                                    <li>Usar filtros más específicos</li>
+                                    <li>Reiniciar aplicación periódicamente</li>
+                                    <li>Cerrar otras aplicaciones pesadas</li>
+                                </ul>
+                                
+                                <h6>Selección se desmarca:</h6>
+                                <p>La actualización automática cada 2 minutos puede interferir. Usar modo de sesión de picking para evitarlo.</p>
+                                
+                                <h6>Errores de carga:</h6>
+                                <p>Si aparecen errores 'order_id' o similares, reiniciar la aplicación y verificar conexiones.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Support -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="mb-4">¿No encuentras la solución?</h2>
+                <p class="lead text-muted mb-4">Nuestro equipo de soporte está disponible para ayudarte.</p>
+                
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="card border-0">
+                            <div class="card-body">
+                                <i class="bi bi-envelope display-4 text-primary mb-3"></i>
+                                <h6>Email</h6>
+                                <p class="text-muted">soporte@mundooutdoor.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0">
+                            <div class="card-body">
+                                <i class="bi bi-telephone display-4 text-success mb-3"></i>
+                                <h6>Teléfono</h6>
+                                <p class="text-muted">+54 11 1234-5678</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0">
+                            <div class="card-body">
+                                <i class="bi bi-clock display-4 text-info mb-3"></i>
+                                <h6>Horarios</h6>
+                                <p class="text-muted">Lun-Vie 9:00-18:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <a href="mailto:soporte@mundooutdoor.com" class="btn btn-primary me-2">
+                        <i class="bi bi-envelope"></i> Enviar Email
+                    </a>
+                    <a href="{{ url_for('guia_rapida') }}" class="btn btn-outline-primary">
+                        <i class="bi bi-lightning"></i> Volver a Guía Rápida
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

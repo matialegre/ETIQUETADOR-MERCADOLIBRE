@@ -1,0 +1,48 @@
+🏔️ MUNDO OUTDOOR - Sistema de Stock Picking
+==========================================
+
+📋 INSTRUCCIONES SÚPER SIMPLES:
+
+OPCIÓN 1 - AUTOMÁTICA (MÁS FÁCIL):
+==================================
+1. Hacer doble clic en: INSTALAR.bat
+2. ¡Listo! Se instala todo automáticamente
+
+OPCIÓN 2 - MANUAL:
+==================
+1. Instalar Python desde: https://python.org
+   ✅ Marcar "Add to PATH" durante instalación
+
+2. Abrir terminal/cmd en esta carpeta
+
+3. Ejecutar: pip install -r requirements.txt
+
+4. Ejecutar: python simple_launcher.py
+
+🎯 QUÉ HACE EL SISTEMA:
+======================
+- Launcher visual con imagen de fondo
+- Sistema completo de picking MercadoLibre
+- Procesamiento paralelo optimizado
+- Cache diario para máximo rendimiento
+- Protección anti-spam para reimpresiones
+
+📁 ARCHIVOS IMPORTANTES:
+=======================
+- simple_launcher.py = Launcher visual
+- background.png = Imagen de fondo
+- gui/app_gui_v3.py = GUI principal
+- INSTALAR.bat = Instalador automático
+
+🔧 REQUISITOS:
+==============
+- Windows 7 o superior
+- Python 3.8 o superior
+- Conexión a internet (para instalar dependencias)
+
+📞 SOPORTE:
+===========
+Si hay problemas, contactar al desarrollador.
+
+🚀 VERSIÓN: 3.0 Optimizada
+==========================

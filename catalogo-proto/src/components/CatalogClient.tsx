@@ -50,12 +50,25 @@ export default function CatalogClient() {
   };
 
   const filtered = useMemo(() => {
+    const normalize = (s: string) => s
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
     let out = products;
-    if (q) {
-      const ql = q.toLowerCase();
-      out = out.filter(
-        (p) => p.name.toLowerCase().includes(ql) || p.sku.toLowerCase().includes(ql)
-      );
+    if (q.trim()) {
+      const nq = normalize(q.trim());
+      out = out.filter((p) => {
+        const haystack = [
+          p.name,
+          p.sku,
+          p.category,
+          p.subcategory,
+          ...(p.tags ?? []),
+        ]
+          .filter(Boolean)
+          .map((x) => normalize(String(x)));
+        return haystack.some((h) => h.includes(nq));
+      });
     }
     if (g) out = out.filter((p) => p.gender === g);
     if (c) out = out.filter((p) => p.category === c);

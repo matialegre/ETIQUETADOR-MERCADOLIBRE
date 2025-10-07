@@ -242,22 +242,7 @@ function ProductForm({initial, onSaved}:{initial?: Partial<Product>, onSaved: ()
       setImage(j.url);
       setImagesArr(prev=> prev.length? prev : [j.url]);
       setFileName("");
-      setUploadInfo(`Subido en: ${j.dest ?? j.url}`);
-      // Auto-guardar si estamos editando un producto existente (autolink)
-      if (sku.trim()) {
-        const img = j.url as string;
-        const normalized = img.startsWith("/") ? img : "/" + img;
-        const body: Product = { sku: sku.trim(), name: name.trim(), price: Number(price||0), gender, category, subcategory, image: normalized };
-        const method = initial?.sku ? "PUT" : "POST";
-        try {
-          const res = await fetch("/api/products", { method, headers:{"Content-Type":"application/json"}, body: JSON.stringify(body), credentials: "same-origin" });
-          if (res.ok) {
-            setUploadInfo(`Imagen subida y asociada al producto (${sku}).`);
-          }
-        } catch {
-          // si falla, el usuario igual puede tocar Guardar manualmente
-        }
-      }
+      setUploadInfo(`Subido en: ${j.dest ?? j.url}. Recordá presionar Guardar para asociarla.`);
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : "Error al subir imagen";
       setUploadError(msg);
@@ -407,7 +392,7 @@ function ProductForm({initial, onSaved}:{initial?: Partial<Product>, onSaved: ()
           </div>
         )}
       </div>
-      <button className="rounded bg-black text-white px-4 py-2">Guardar</button>
+      <button disabled={uploading} className="rounded bg-black text-white px-4 py-2 disabled:opacity-60">{uploading?"Subiendo…":"Guardar"}</button>
     </form>
   );
 }

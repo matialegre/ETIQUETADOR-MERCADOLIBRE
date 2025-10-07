@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mundo Outdoor - Sistema de Picking{% endblock %}</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2c5530;
+            --secondary-color: #4a7c59;
+            --accent-color: #7fb069;
+            --light-green: #a7c957;
+            --background: #f8fffe;
+            --text-dark: #2d3436;
+            --text-light: #636e72;
+            --border-color: #ddd;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            box-shadow: 0 2px 20px rgba(44, 85, 48, 0.1);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: white !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--light-green) !important;
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Cards */
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-green) 100%);
+            color: white;
+            border: none;
+            padding: 1.5rem;
+            font-weight: 600;
+        }
+
+        .card-body {
+            padding: 2rem;
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border: none;
+            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(44, 85, 48, 0.3);
+        }
+
+        .btn-outline-primary {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        /* Icons */
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-green) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        /* Steps */
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 0 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer h5 {
+            color: var(--light-green);
+            margin-bottom: 1rem;
+        }
+
+        .footer a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: var(--light-green);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Alert styles */
+        .alert-success {
+            background-color: rgba(167, 201, 87, 0.1);
+            border-color: var(--light-green);
+            color: var(--primary-color);
+        }
+
+        .alert-info {
+            background-color: rgba(127, 176, 105, 0.1);
+            border-color: var(--accent-color);
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <i class="bi bi-mountains"></i> Mundo Outdoor
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('index') }}">
+                            <i class="bi bi-house"></i> Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('guia_practica') }}">Guía Práctica</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('guia_rapida') }}">Guía Rápida</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('instalacion') }}">
+                            <i class="bi bi-download"></i> Instalación
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('picking') }}">Proceso de Picking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('problemas') }}">
+                            <i class="bi bi-question-circle"></i> Ayuda
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5><i class="bi bi-mountains"></i> Mundo Outdoor</h5>
+                    <p>Sistema profesional de picking y gestión de pedidos para optimizar tu operación logística.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ url_for('guia_rapida') }}">Guía Rápida</a></li>
+                        <li><a href="{{ url_for('instalacion') }}">Instalación</a></li>
+                        <li><a href="{{ url_for('picking') }}">Proceso de Picking</a></li>
+                        <li><a href="{{ url_for('problemas') }}">Solución de Problemas</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Soporte Técnico</h5>
+                    <p><i class="bi bi-envelope"></i> soporte@mundooutdoor.com</p>
+                    <p><i class="bi bi-telephone"></i> +54 11 1234-5678</p>
+                    <p><i class="bi bi-clock"></i> Lun-Vie 9:00-18:00</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2025 Mundo Outdoor. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>Sistema de Picking v3.0 | Documentación Online</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add fade-in animation to cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('fade-in');
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>

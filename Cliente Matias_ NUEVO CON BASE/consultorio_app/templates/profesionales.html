@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+
+{% block title %}Seleccionar Profesional - Sistema de Turnos{% endblock %}
+
+{% block content %}
+<div class="main-container">
+    <div class="container fade-in">
+        <!-- Header con botón cerrar -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h1 class="text-white fw-bold mb-2">Seleccionar Profesional</h1>
+                        <p class="text-white-50 mb-0">
+                            <i class="fas fa-users me-2"></i>
+                            Elija el profesional para gestionar sus turnos
+                        </p>
+                    </div>
+                    <a href="{{ url_for('logout') }}" class="btn btn-danger btn-lg">
+                        <i class="fas fa-sign-out-alt me-2"></i>
+                        CERRAR SESIÓN
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Grid de profesionales -->
+        <div class="row justify-content-center g-4">
+            {% for profesional in profesionales %}
+            {% set icons = ['fa-user-md', 'fa-brain', 'fa-ear-listen', 'fa-comments'] %}
+            {% set delay = loop.index * 0.1 %}
+            {% set icon = icons[loop.index0 % 4] %}
+            {% set turnos_hoy = range(3, 12) | random %}
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-custom text-center h-100 professional-card slide-in" 
+                     style="cursor: pointer; animation-delay: {{ delay }}s;" 
+                     onclick="window.location.href='{{ url_for('calendario', profesional_id=profesional.id) }}'">
+                    <div class="card-body p-4">
+                        <!-- Avatar del profesional -->
+                        <div class="professional-avatar purple-element mx-auto mb-4" 
+                             style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; position: relative;">
+                            <i class="fas {{ icon }}" style="font-size: 45px;"></i>
+                            <div class="professional-status"></div>
+                        </div>
+                        
+                        <!-- Información del profesional -->
+                        <div class="mb-3">
+                            <h4 class="fw-bold mb-2" style="color: var(--text-primary);">{{ profesional.nombre }} {{ profesional.apellido }}</h4>
+                            <div class="purple-element p-3 rounded-3">
+                                <i class="fas fa-stethoscope me-2"></i>
+                                <span class="fw-semibold">{{ profesional.especialidad }}</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Indicadores -->
+                        <div class="row text-center mt-3">
+                            <div class="col-6">
+                                <div class="small text-muted">Disponible</div>
+                                <div class="text-success fw-bold">
+                                    <i class="fas fa-circle pulse"></i> Online
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="small text-muted">Turnos Hoy</div>
+                                <div class="fw-bold" style="color: var(--primary-color);">
+                                    <i class="fas fa-calendar-day me-1"></i> {{ turnos_hoy }}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Botón de acción -->
+                        <div class="mt-4">
+                            <div class="btn btn-outline-primary w-100">
+                                <i class="fas fa-calendar-plus me-2"></i>
+                                Ver Calendario
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <!-- Información adicional -->
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <div class="card" style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(20px);">
+                    <div class="card-body p-4">
+                        <h5 class="text-white mb-3">
+                            <i class="fas fa-info-circle me-2"></i>
+                            Información del Sistema
+                        </h5>
+                        <div class="row text-center">
+                            <div class="col-md-3 col-6 mb-3">
+                                <div class="text-white-50 small">Horarios</div>
+                                <div class="text-white fw-bold">8:00 - 18:00</div>
+                            </div>
+                            <div class="col-md-3 col-6 mb-3">
+                                <div class="text-white-50 small">Días Laborables</div>
+                                <div class="text-white fw-bold">Lun - Vie</div>
+                            </div>
+                            <div class="col-md-3 col-6 mb-3">
+                                <div class="text-white-50 small">Duración Turno</div>
+                                <div class="text-white fw-bold">60 minutos</div>
+                            </div>
+                            <div class="col-md-3 col-6 mb-3">
+                                <div class="text-white-50 small">Estado Sistema</div>
+                                <div class="text-success fw-bold">
+                                    <i class="fas fa-check-circle me-1"></i> Activo
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.professional-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+}
+
+.professional-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--primary-color);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.professional-avatar {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.professional-avatar:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.professional-status {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    background: var(--success-color);
+    border: 3px solid white;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+}
+
+/* Logo de fondo */
+body::after {
+    content: '';
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+    height: 120px;
+    background-image: url('{{ url_for("static", filename="images/logo.png") }}');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.3;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.slide-in {
+    animation: slideInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+</style>
+{% endblock %}

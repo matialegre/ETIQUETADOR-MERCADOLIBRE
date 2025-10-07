@@ -2,7 +2,7 @@ import Link from "next/link";
 import HeroCarousel from "@/components/HeroCarousel";
 import { readSite } from "@/lib/site";
 import { readProducts } from "@/lib/fsdb";
-import { formatPrice, buildWaLink } from "@/lib/data";
+import ProductCard from "@/components/ProductCard";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -43,20 +43,7 @@ export default async function Home() {
         <h2 className="text-2xl font-bold text-white">Destacados</h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((p) => (
-            <div key={p.sku} className="group rounded-2xl overflow-hidden border bg-black/40 text-white">
-              <div className="relative aspect-[4/5] bg-gray-800">
-                <img src={p.image} alt={p.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                <span className="absolute left-3 top-3 inline-flex items-center rounded-full bg-white/90 text-black text-xs font-semibold px-2 py-0.5">NUEVO</span>
-              </div>
-              <div className="p-4 space-y-1">
-                <div className="text-sm text-gray-300">{p.sku}</div>
-                <div className="font-semibold">{p.name}</div>
-                <div className="text-lg font-bold">{formatPrice(p.price)}</div>
-                <a href={buildWaLink(p)} target="_blank" className="inline-flex mt-2 items-center justify-center rounded-full bg-green-600 text-white px-4 py-2 text-sm hover:bg-green-700">
-                  Consultar por WhatsApp
-                </a>
-              </div>
-            </div>
+            <ProductCard key={p.sku} product={p} />
           ))}
         </div>
       </section>

@@ -1,0 +1,56 @@
+COMANDOS PARA COMPILAR EJECUTABLES MUNDO OUTDOOR
+=================================================
+
+1. VERSIÓN DEPÓSITO (CON CONSOLA):
+pyinstaller --onefile --console --name "Cliente_Matias_GUI_v3_DEPOSITO" --add-data ".env;." --add-data "api;api" --add-data "services;services" --add-data "models;models" --add-data "utils;utils" --add-data "printing;printing" --hidden-import "ttkbootstrap" --hidden-import "requests" --hidden-import "python-dotenv" --hidden-import "tkinter" --clean gui/app_gui_v3.py
+
+2. VERSIÓN DEPÓSITO (SIN CONSOLA):
+pyinstaller --onefile --windowed --name "Cliente_Matias_GUI_v3_DEPOSITO" --add-data ".env;." --add-data "api;api" --add-data "services;services" --add-data "models;models" --add-data "utils;utils" --add-data "printing;printing" --hidden-import "ttkbootstrap" --hidden-import "requests" --hidden-import "python-dotenv" --hidden-import "tkinter" --clean gui/app_gui_v3.py
+
+3. VERSIÓN CABA (CON CONSOLA):
+pyinstaller --onefile --console --name "Cliente_Matias_GUI_v3_CABA" --add-data ".env;." --add-data "config_override_caba.py;." --add-data "api;api" --add-data "services;services" --add-data "models;models" --add-data "utils;utils" --add-data "printing;printing" --hidden-import "ttkbootstrap" --hidden-import "requests" --hidden-import "python-dotenv" --hidden-import "tkinter" --clean gui/app_gui_v3_caba_real.py
+
+
+pyinstaller `
+  --name "Cliente_Matias_GUI_v3_CABA" `
+  --onefile `
+  --windowed `
+  --clean `
+  --add-data ".env;." `
+  --add-data "config_override_caba.py;." `
+  --add-data "api;api" `
+  --add-data "services;services" `
+  --add-data "models;models" `
+  --add-data "utils;utils" `
+  --add-data "printing;printing" `
+  --collect-all ttkbootstrap `
+  --hidden-import "ttkbootstrap" `
+  --hidden-import "requests" `
+  --hidden-import "python-dotenv" `
+  --hidden-import "tkinter" `
+  --hidden-import "win32print" `
+  --hidden-import "win32api" `
+  --hidden-import "PIL.Image" `
+  --hidden-import "PIL.ImageTk" `
+  --hidden-import "reportlab" `
+  gui/app_gui_v3_caba_real.py
+
+
+
+5. VERSIÓN ROCA (CON CONSOLA):
+pyinstaller --onefile --console --name "Cliente_Matias_GUI_v3_ROCA" --add-data ".env;." --add-data "api;api" --add-data "services;services" --add-data "models;models" --add-data "utils;utils" --add-data "printing;printing" --hidden-import "ttkbootstrap" --hidden-import "requests" --hidden-import "python-dotenv" --hidden-import "tkinter" --clean gui/app_gui_v3_roca.py
+
+6. VERSIÓN ROCA (SIN CONSOLA):
+pyinstaller --onefile --windowed --name "Cliente_Matias_GUI_v3_ROCA" --add-data ".env;." --add-data "api;api" --add-data "services;services" --add-data "models;models" --add-data "utils;utils" --add-data "printing;printing" --hidden-import "ttkbootstrap" --hidden-import "requests" --hidden-import "python-dotenv" --hidden-import "tkinter" --clean gui/app_gui_v3_roca.py
+
+DIFERENCIAS CLAVE:
+==================
+- DEPÓSITO usa: gui/app_gui_v3.py
+- CABA usa: gui/app_gui_v3_caba_real.py + config_override_caba.py
+- --console = se ve la consola negra atrás
+- --windowed = NO se ve la consola negra atrás (más profesional)
+
+RECOMENDACIÓN:
+==============
+Para uso final, usar los comandos SIN CONSOLA (--windowed).
+Para debugging, usar los comandos CON CONSOLA (--console).

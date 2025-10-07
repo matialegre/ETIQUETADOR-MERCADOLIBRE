@@ -1,0 +1,77 @@
+{
+  "background_image": "C:\\Users\\Mundo Outdoor\\Desktop\\Cliente Matias - copia\\mundo_outdoor_background.png",
+  "last_selection": "GUI V3",
+  "window_size": "800x600",
+  "deposito": [
+    {"name": "Cliente CABA", "exe": "Cliente_Matias_GUI_v3_CABA.exe"},
+    {"name": "Cliente DEPÓSITO", "exe": "Cliente_Matias_GUI_v3_DEPOSITO.exe"},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""}
+  ],
+  "seguimientos": [
+    {"name": "Visor Movimientos CABA", "exe": "VisorMovimientoCABA.exe"},
+    {"name": "Visor Movimientos DEPÓSITO", "exe": "VisorMovimientosDEPOSITO.exe"},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""}
+  ],
+  "monitoreo": [
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""}
+  ],
+  "comunicacion": [
+    {"name": "Chat Cliente Simple", "exe": "ChatClienteSimple_MundoOutdoor.exe"},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""}
+  ],
+  "test": [
+    {"name": "Test Stock Movement CABA", "exe": "Test_Stock_Movement_CABA.exe"},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""}
+  ],
+  "ayuda": [
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""},
+    {"name": "", "exe": ""}
+  ]
+}

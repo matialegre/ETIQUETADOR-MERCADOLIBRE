@@ -9,7 +9,7 @@ export type Product = {
   subcategory: string; // e.g., Con capucha, Sin capucha
   image: string; // "/images/xxx.jpg"
   images?: string[]; // optional gallery
-  tags?: string[]; // optional labels: HOMBRE, CUELLITO, POLAR, etc.
+  tags?: string[]; // optional keywords for search
 };
 
 export async function loadProducts(): Promise<Product[]> {

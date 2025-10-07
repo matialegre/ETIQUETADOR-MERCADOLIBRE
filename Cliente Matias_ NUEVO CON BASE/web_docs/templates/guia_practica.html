@@ -1,0 +1,519 @@
+{% extends "base.html" %}
+
+{% block title %}Guía Práctica - Sistema de Picking Mundo Outdoor{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1><i class="bi bi-clipboard-check"></i> Guía Práctica de Uso</h1>
+                <p class="lead">Manual paso a paso para el sistema de picking</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Preparación Inicial -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="card mb-4">
+                    <div class="card-header bg-warning text-dark">
+                        <h3><i class="bi bi-exclamation-triangle"></i> ANTES DE EMPEZAR</h3>
+                    </div>
+                    <div class="card-body">
+                        <h5>1. Prueba de Impresora ZEBRA</h5>
+                        <div class="alert alert-info">
+                            <strong>MUY IMPORTANTE:</strong> Antes de hacer cualquier cosa, probar que la impresora ZEBRA funcione correctamente.
+                        </div>
+                        <ol>
+                            <li>Verificar que la impresora ZEBRA esté encendida</li>
+                            <li>Ir a Windows → Configuración → Impresoras</li>
+                            <li>Seleccionar la impresora ZEBRA como predeterminada</li>
+                            <li>Hacer una impresión de prueba desde Windows</li>
+                            <li>Si no imprime, revisar drivers y conexión</li>
+                        </ol>
+                        
+                        <h5 class="mt-4">2. Abrir el Sistema</h5>
+                        <ul>
+                            <li><strong>DEPÓSITO:</strong> Ejecutar <code>Cliente_Matias_GUI_v3_DEPOSITO.exe</code></li>
+                            <li><strong>CABA:</strong> Ejecutar <code>Cliente_Matias_GUI_v3_CABA.exe</code></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Paso 1: Seleccionar Fechas -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><span class="badge bg-primary me-2">PASO 1</span> Elegir Fechas a Filtrar</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h6>Campos de Fecha:</h6>
+                                <ul>
+                                    <li><strong>Fecha Desde:</strong> Fecha inicial del rango</li>
+                                    <li><strong>Fecha Hasta:</strong> Fecha final del rango</li>
+                                    <li><strong>Por defecto:</strong> Muestra el día actual</li>
+                                </ul>
+                                
+                                <h6 class="mt-3">Cómo Cambiar las Fechas:</h6>
+                                <ol>
+                                    <li>Hacer clic en el campo de fecha</li>
+                                    <li>Seleccionar la fecha deseada del calendario</li>
+                                    <li>Repetir para "Fecha Hasta" si es necesario</li>
+                                    <li>Hacer clic en <strong>"Cargar"</strong> para aplicar</li>
+                                </ol>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="alert alert-success">
+                                    <h6><i class="bi bi-lightbulb"></i> Recomendación:</h6>
+                                    <p class="mb-0">Para el día a día, usar solo la fecha actual. Para buscar pedidos anteriores, ampliar el rango.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Paso 2: Cargar Pedidos -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><span class="badge bg-primary me-2">PASO 2</span> Cargar Pedidos</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6>Botón "Cargar":</h6>
+                                <ul>
+                                    <li>Descarga pedidos de MercadoLibre</li>
+                                    <li>Aplica filtros automáticamente</li>
+                                    <li>Muestra solo pedidos de tu depósito</li>
+                                    <li>Se actualiza automáticamente cada 2 minutos</li>
+                                </ul>
+                                
+                                <div class="alert alert-warning">
+                                    <strong>Importante:</strong> Siempre hacer clic en "Cargar" al empezar el turno.
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h6>¿Qué va a hacer?</h6>
+                                <ol>
+                                    <li>Conectar con MercadoLibre</li>
+                                    <li>Descargar pedidos del rango de fechas</li>
+                                    <li>Filtrar por depósito automáticamente</li>
+                                    <li>Mostrar solo pedidos listos para pickear</li>
+                                    <li>Actualizar la lista en pantalla</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Paso 3: Entender los Colores -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><span class="badge bg-primary me-2">PASO 3</span> Entender los Colores de la Lista</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="card border-success">
+                                    <div class="card-header bg-success text-white">
+                                        <h6><i class="bi bi-check-circle"></i> VERDE - Todo Bien</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="mb-0">
+                                            <li>Pedido listo para pickear</li>
+                                            <li>Estado: "ready_to_print"</li>
+                                            <li>Tiene stock disponible</li>
+                                            <li>Es del depósito correcto</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="card border-warning">
+                                    <div class="card-header bg-warning text-dark">
+                                        <h6><i class="bi bi-exclamation-triangle"></i> AMARILLO - Atención</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="mb-0">
+                                            <li>Pedido con algún problema menor</li>
+                                            <li>Puede requerir verificación</li>
+                                            <li>Revisar antes de pickear</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="card border-danger">
+                                    <div class="card-header bg-danger text-white">
+                                        <h6><i class="bi bi-x-circle"></i> ROJO - Problema</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="mb-0">
+                                            <li>Pedido con error</li>
+                                            <li>No se puede pickear</li>
+                                            <li>Requiere atención especial</li>
+                                            <li>Contactar supervisor</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="card border-primary">
+                                    <div class="card-header bg-primary text-white">
+                                        <h6><i class="bi bi-boxes"></i> VIOLETA - Pack Multiventa</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="mb-0">
+                                            <li>Pedido con múltiples artículos</li>
+                                            <li>Se pickean todos juntos</li>
+                                            <li>Una sola etiqueta de envío</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Paso 4: Filtros Disponibles -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><span class="badge bg-primary me-2">PASO 4</span> Usar los Filtros</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6>Filtros Principales:</h6>
+                                <table class="table table-sm">
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Incluir impresos</strong></td>
+                                            <td>Muestra pedidos ya procesados (para reimpresión)</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Pedidos hasta 13hs</strong></td>
+                                            <td>Solo pedidos del último día hasta las 13:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Por depósito</strong></td>
+                                            <td>Filtra automáticamente por tu depósito</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Cuándo Usar Cada Filtro:</h6>
+                                <ul>
+                                    <li><strong>"Incluir impresos":</strong> Solo cuando necesites reimprimir una etiqueta</li>
+                                    <li><strong>"Hasta 13hs":</strong> Para priorizar pedidos urgentes del día</li>
+                                    <li><strong>Sin filtros:</strong> Para trabajo normal del día</li>
+                                </ul>
+                                
+                                <div class="alert alert-info">
+                                    <strong>Tip:</strong> Para el trabajo diario normal, no activar ningún filtro especial.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Paso 5: Proceso de Picking -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><span class="badge bg-primary me-2">PASO 5</span> Hacer el Picking</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6>Opción 1: Con Lector de Códigos de Barras</h6>
+                                <ol>
+                                    <li>Hacer clic en <strong>"Iniciar Sesión de Picking"</strong></li>
+                                    <li>Escanear el código de barras del producto</li>
+                                    <li>El sistema encuentra automáticamente el pedido</li>
+                                    <li>Verificar que coincida el producto</li>
+                                    <li>Confirmar y continuar con el siguiente</li>
+                                </ol>
+                                
+                                <div class="alert alert-success">
+                                    <strong>Recomendado:</strong> Este método es más rápido para procesar muchos pedidos.
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Opción 2: Selección Manual</h6>
+                                <ol>
+                                    <li>Seleccionar un pedido de la lista</li>
+                                    <li>Hacer clic en <strong>"Pickear"</strong></li>
+                                    <li>Escanear el código de barras para verificar</li>
+                                    <li>Confirmar cantidad y completar</li>
+                                </ol>
+                                
+                                <div class="alert alert-info">
+                                    <strong>Útil para:</strong> Pedidos específicos o cuando hay problemas con el lector.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h6 class="mt-4">¿Qué pasa cuando pickeas?</h6>
+                        <ol>
+                            <li><strong>Se imprime automáticamente</strong> la etiqueta de envío</li>
+                            <li><strong>Se descuenta el stock</strong> en la base de datos</li>
+                            <li><strong>Desaparece de la lista</strong> (ya está procesado)</li>
+                            <li><strong>Se registra en el historial</strong> del día</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Paso 6: Botones Importantes -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><span class="badge bg-primary me-2">PASO 6</span> Botones y Funciones</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="card border-info">
+                                    <div class="card-header bg-info text-white">
+                                        <h6>Botón "INFO"</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <p><strong>Qué hace:</strong> Muestra información detallada del pedido seleccionado</p>
+                                        <p><strong>Incluye:</strong></p>
+                                        <ul class="small">
+                                            <li>Datos del comprador</li>
+                                            <li>Dirección de envío</li>
+                                            <li>Detalles del producto</li>
+                                            <li>Estado del pedido</li>
+                                            <li>Notas especiales</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="card border-warning">
+                                    <div class="card-header bg-warning text-dark">
+                                        <h6>Botón "FALLADO"</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <p><strong>Cuándo usar:</strong> Cuando no hay stock del producto</p>
+                                        <p><strong>Qué hace:</strong></p>
+                                        <ul class="small">
+                                            <li>Marca el pedido como fallido</li>
+                                            <li>Abre WhatsApp automáticamente</li>
+                                            <li>Envía notificación al supervisor</li>
+                                            <li>Quita el pedido de la lista</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="card border-danger">
+                                    <div class="card-header bg-danger text-white">
+                                        <h6>Botón "CANCELAR"</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <p><strong>Cuándo usar:</strong> Para cancelar un pedido completamente</p>
+                                        <p><strong>Qué hace:</strong></p>
+                                        <ul class="small">
+                                            <li>Cancela el pedido en MercadoLibre</li>
+                                            <li>Calcula nuevo ganador automáticamente</li>
+                                            <li>Actualiza las notas</li>
+                                            <li>Registra la cancelación</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Paso 7: Ver Pedidos Pickeados -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><span class="badge bg-primary me-2">PASO 7</span> Ver Pedidos Pickeados</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h6>Para ver los pedidos ya procesados:</h6>
+                                <ol>
+                                    <li>Activar el filtro <strong>"Incluir impresos"</strong></li>
+                                    <li>Hacer clic en <strong>"Cargar"</strong></li>
+                                    <li>Ahora verás también los pedidos ya pickeados</li>
+                                    <li>Aparecen marcados como "Printed" o "Shipped"</li>
+                                </ol>
+                                
+                                <h6 class="mt-3">¿Para qué sirve?</h6>
+                                <ul>
+                                    <li><strong>Reimprimir etiquetas</strong> si se dañaron</li>
+                                    <li><strong>Verificar</strong> qué se procesó en el día</li>
+                                    <li><strong>Buscar</strong> un pedido específico</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="alert alert-warning">
+                                    <h6><i class="bi bi-exclamation-triangle"></i> Importante:</h6>
+                                    <p class="mb-0">Al reimprimir, NO se descuenta stock nuevamente. Solo se imprime la etiqueta.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Errores Comunes -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="card">
+                    <div class="card-header bg-danger text-white">
+                        <h3><i class="bi bi-exclamation-circle"></i> Errores Comunes y Soluciones</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <h6>"NO ESTÁ PARA PICKEAR"</h6>
+                                <p><strong>Causas:</strong></p>
+                                <ul class="small">
+                                    <li>Producto de otro depósito</li>
+                                    <li>Pedido ya procesado</li>
+                                    <li>Código incorrecto</li>
+                                </ul>
+                                <p><strong>Solución:</strong> Verificar filtros y buscar manualmente el pedido.</p>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <h6>"Impresora no detectada"</h6>
+                                <p><strong>Causas:</strong></p>
+                                <ul class="small">
+                                    <li>Impresora apagada</li>
+                                    <li>Cable desconectado</li>
+                                    <li>Drivers incorrectos</li>
+                                </ul>
+                                <p><strong>Solución:</strong> Verificar conexión y configurar como predeterminada.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Resumen Final -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="mb-4">Resumen del Flujo Diario</h2>
+                
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="card border-0">
+                            <div class="card-body">
+                                <div class="feature-icon">
+                                    <i class="bi bi-1-circle"></i>
+                                </div>
+                                <h6>Preparar</h6>
+                                <p class="small text-muted">Verificar impresora y abrir sistema</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0">
+                            <div class="card-body">
+                                <div class="feature-icon">
+                                    <i class="bi bi-2-circle"></i>
+                                </div>
+                                <h6>Cargar</h6>
+                                <p class="small text-muted">Seleccionar fechas y cargar pedidos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0">
+                            <div class="card-body">
+                                <div class="feature-icon">
+                                    <i class="bi bi-3-circle"></i>
+                                </div>
+                                <h6>Pickear</h6>
+                                <p class="small text-muted">Escanear códigos y procesar pedidos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

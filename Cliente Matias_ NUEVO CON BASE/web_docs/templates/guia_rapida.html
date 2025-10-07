@@ -1,0 +1,270 @@
+{% extends "base.html" %}
+
+{% block title %}Guía Rápida - Mundo Outdoor Sistema de Picking{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1><i class="bi bi-play-circle"></i> Tutorial Paso a Paso</h1>
+                <p class="lead">Cómo usar el sistema de picking - Guía práctica</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Start Steps -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                
+                <!-- Step 1 -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h4><span class="badge bg-primary me-2">1</span> Iniciar el Sistema</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h6>Para DEPÓSITO:</h6>
+                                <ol>
+                                    <li>Ejecutar <code>INICIAR_DEPOSITO.bat</code></li>
+                                    <li>Esperar a que aparezca la ventana principal</li>
+                                    <li>Verificar conexión a base de datos local</li>
+                                </ol>
+                                
+                                <h6 class="mt-3">Para CABA:</h6>
+                                <ol>
+                                    <li>Ejecutar <code>INICIAR_CABA.bat</code></li>
+                                    <li>Verificar conexión a SQL Server remoto</li>
+                                    <li>Confirmar acceso a API Dragonfish remota</li>
+                                </ol>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="alert alert-info">
+                                    <i class="bi bi-info-circle"></i> <strong>Tip:</strong> 
+                                    Si hay errores de conexión, revisar la sección de <a href="{{ url_for('problemas') }}">Problemas Comunes</a>.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h4><span class="badge bg-primary me-2">2</span> Cargar Pedidos</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <ol>
+                                    <li>Hacer clic en <strong>"Cargar"</strong> en la barra superior</li>
+                                    <li>Seleccionar rango de fechas (por defecto: hoy)</li>
+                                    <li>Esperar a que se carguen los pedidos desde MercadoLibre</li>
+                                    <li>Verificar que aparezcan pedidos en la lista</li>
+                                </ol>
+                                
+                                <div class="alert alert-success mt-3">
+                                    <i class="bi bi-check-circle"></i> 
+                                    Los pedidos se actualizan automáticamente cada 2 minutos
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <h6>Filtros Disponibles:</h6>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-check"></i> Incluir impresos</li>
+                                    <li><i class="bi bi-check"></i> Pedidos hasta las 13hs</li>
+                                    <li><i class="bi bi-check"></i> Por depósito</li>
+                                    <li><i class="bi bi-check"></i> Por estado</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h4><span class="badge bg-primary me-2">3</span> Proceso de Picking</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6>Método 1: Escaneo Manual</h6>
+                                <ol>
+                                    <li>Seleccionar pedido de la lista</li>
+                                    <li>Hacer clic en <strong>"Pickear"</strong></li>
+                                    <li>Escanear código de barras del producto</li>
+                                    <li>Confirmar cantidad y completar</li>
+                                </ol>
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Método 2: Picking Automático</h6>
+                                <ol>
+                                    <li>Hacer clic en <strong>"Iniciar Sesión de Picking"</strong></li>
+                                    <li>Escanear códigos de barras directamente</li>
+                                    <li>El sistema identifica automáticamente el pedido</li>
+                                    <li>Confirmar y continuar con el siguiente</li>
+                                </ol>
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-warning mt-3">
+                            <i class="bi bi-exclamation-triangle"></i> 
+                            <strong>Importante:</strong> Siempre verificar que el producto escaneado coincida con el pedido antes de confirmar.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h4><span class="badge bg-primary me-2">4</span> Impresión de Etiquetas</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h6>Impresión Automática:</h6>
+                                <ol>
+                                    <li>Al completar el picking, se imprime automáticamente</li>
+                                    <li>La etiqueta incluye datos de envío y código de barras</li>
+                                    <li>El stock se descuenta automáticamente</li>
+                                    <li>El pedido se marca como "Impreso"</li>
+                                </ol>
+                                
+                                <h6 class="mt-3">Reimpresión:</h6>
+                                <ol>
+                                    <li>Activar filtro <strong>"Incluir impresos"</strong></li>
+                                    <li>Seleccionar pedido ya impreso</li>
+                                    <li>Hacer clic en <strong>"Reimprimir"</strong></li>
+                                    <li>No se descuenta stock nuevamente</li>
+                                </ol>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="alert alert-info">
+                                    <i class="bi bi-printer"></i> <strong>Impresora:</strong><br>
+                                    Configurar impresora ZPL para etiquetas de envío. Ver sección de <a href="{{ url_for('instalacion') }}#impresora">configuración</a>.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h4><span class="badge bg-primary me-2">5</span> Reportes y Más Opciones</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6>Generar Reportes:</h6>
+                                <ul>
+                                    <li><strong>Imprimir Lista:</strong> PDF con todos los pedidos</li>
+                                    <li><strong>Historial:</strong> Pedidos procesados en el día</li>
+                                    <li><strong>Estadísticas:</strong> Rendimiento y métricas</li>
+                                </ul>
+                                
+                                <h6 class="mt-3">Funciones Especiales:</h6>
+                                <ul>
+                                    <li><strong>Cancelar Pedido:</strong> Cancela y calcula nuevo ganador</li>
+                                    <li><strong>Marcar Fallido:</strong> Indica falta de stock</li>
+                                    <li><strong>Buscar Pedido:</strong> Localizar por número o SKU</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Filtros Especiales:</h6>
+                                <ul>
+                                    <li><strong>IMPRIMIR NQNSHOP:</strong> Solo pedidos NQNSHOP</li>
+                                    <li><strong>IMPRIMIR MUNDOCABA:</strong> Solo pedidos CABA</li>
+                                </ul>
+                                
+                                <div class="alert alert-success mt-3">
+                                    <i class="bi bi-trophy"></i> 
+                                    <strong>Pro Tip:</strong> Usa atajos de teclado para mayor velocidad: F5 para cargar, F1 para pickear.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Reference -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center mb-4">Referencia Rápida</h2>
+                
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5><i class="bi bi-keyboard"></i> Atajos de Teclado</h5>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-sm">
+                                    <tbody>
+                                        <tr><td><kbd>F5</kbd></td><td>Cargar pedidos</td></tr>
+                                        <tr><td><kbd>F1</kbd></td><td>Iniciar picking</td></tr>
+                                        <tr><td><kbd>Ctrl+P</kbd></td><td>Imprimir lista</td></tr>
+                                        <tr><td><kbd>Ctrl+F</kbd></td><td>Buscar pedido</td></tr>
+                                        <tr><td><kbd>Esc</kbd></td><td>Cancelar operación</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5><i class="bi bi-exclamation-circle"></i> Estados de Pedidos</h5>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-sm">
+                                    <tbody>
+                                        <tr><td><span class="badge bg-warning">Ready to Print</span></td><td>Listo para pickear</td></tr>
+                                        <tr><td><span class="badge bg-success">Printed</span></td><td>Ya impreso</td></tr>
+                                        <tr><td><span class="badge bg-info">Shipped</span></td><td>Enviado</td></tr>
+                                        <tr><td><span class="badge bg-danger">Cancelled</span></td><td>Cancelado</td></tr>
+                                        <tr><td><span class="badge bg-secondary">Failed</span></td><td>Fallido</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Video Tutorial -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="mb-4">¿Prefieres un video tutorial?</h2>
+                <p class="lead text-muted mb-4">Próximamente estará disponible un video tutorial completo del sistema.</p>
+                
+                <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                    <a href="{{ url_for('picking') }}" class="btn btn-primary">
+                        <i class="bi bi-book"></i> Guía Detallada de Picking
+                    </a>
+                    <a href="{{ url_for('problemas') }}" class="btn btn-outline-primary">
+                        <i class="bi bi-question-circle"></i> Solución de Problemas
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

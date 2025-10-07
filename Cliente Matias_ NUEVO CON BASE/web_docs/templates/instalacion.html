@@ -1,0 +1,379 @@
+{% extends "base.html" %}
+
+{% block title %}Instalación - Mundo Outdoor Sistema de Picking{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1><i class="bi bi-download"></i> Instalación</h1>
+                <p class="lead">Guía completa para instalar y configurar el sistema</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Version Selection -->
+<section class="py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-6 fw-bold mb-3">Selecciona tu Versión</h2>
+                <p class="lead text-muted">Cada ubicación tiene su configuración específica</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card h-100" id="deposito">
+                    <div class="card-header text-center">
+                        <h4><i class="bi bi-building"></i> Versión DEPÓSITO</h4>
+                        <p class="mb-0">Para uso en depósito principal</p>
+                    </div>
+                    <div class="card-body">
+                        <h6>Características:</h6>
+                        <ul class="list-unstyled mb-4">
+                            <li><i class="bi bi-check-circle text-success"></i> Base de datos local</li>
+                            <li><i class="bi bi-check-circle text-success"></i> API Dragonfish local</li>
+                            <li><i class="bi bi-check-circle text-success"></i> Filtros: DEPO, MUNDOAL, MTGBBL, BBPS, MONBAHIA, MTGBBPS</li>
+                            <li><i class="bi bi-check-circle text-success"></i> Configuración estándar</li>
+                        </ul>
+                        
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" onclick="showDepositoInstructions()">
+                                <i class="bi bi-download"></i> Descargar DEPÓSITO
+                            </button>
+                            <small class="text-muted">Tamaño: ~32 MB</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card h-100" id="caba">
+                    <div class="card-header text-center">
+                        <h4><i class="bi bi-geo-alt"></i> Versión CABA</h4>
+                        <p class="mb-0">Para uso en sucursal CABA</p>
+                    </div>
+                    <div class="card-body">
+                        <h6>Características:</h6>
+                        <ul class="list-unstyled mb-4">
+                            <li><i class="bi bi-check-circle text-success"></i> SQL Server remoto (192.168.1.14)</li>
+                            <li><i class="bi bi-check-circle text-success"></i> API Dragonfish remota</li>
+                            <li><i class="bi bi-check-circle text-success"></i> Filtros: CAB, CABA, MUNDOCAB</li>
+                            <li><i class="bi bi-check-circle text-success"></i> Configuración específica CABA</li>
+                        </ul>
+                        
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" onclick="showCabaInstructions()">
+                                <i class="bi bi-download"></i> Descargar CABA
+                            </button>
+                            <small class="text-muted">Tamaño: ~32 MB</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Installation Instructions -->
+<section class="py-5 bg-light" id="instructions">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                
+                <!-- DEPÓSITO Instructions -->
+                <div id="deposito-instructions" style="display: none;">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="bi bi-building"></i> Instalación - Versión DEPÓSITO</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="alert alert-info">
+                                <i class="bi bi-info-circle"></i> 
+                                <strong>Nota:</strong> Esta versión está configurada para uso en el depósito principal con base de datos y API locales.
+                            </div>
+                            
+                            <h5>Paso 1: Descargar Archivos</h5>
+                            <ol>
+                                <li>Descargar <code>DISTRIBUCION_DEPOSITO.zip</code></li>
+                                <li>Extraer en una carpeta (ej: <code>C:\MundoOutdoor\</code>)</li>
+                                <li>Verificar que contenga:
+                                    <ul>
+                                        <li><code>Cliente_Matias_GUI_v3_DEPOSITO.exe</code></li>
+                                        <li><code>INICIAR_DEPOSITO.bat</code></li>
+                                        <li><code>README_DEPOSITO.txt</code></li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            
+                            <h5>Paso 2: Verificar Requisitos</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>Software Necesario:</h6>
+                                    <ul>
+                                        <li>Windows 10/11</li>
+                                        <li>SQL Server local</li>
+                                        <li>ODBC Driver 17 for SQL Server</li>
+                                        <li>Impresora ZPL (para etiquetas)</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>Conexiones Requeridas:</h6>
+                                    <ul>
+                                        <li>Base de datos DRAGONFISH_DEPOSITO</li>
+                                        <li>API Dragonfish local</li>
+                                        <li>Internet (para MercadoLibre)</li>
+                                        <li>Red local (para impresora)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <h5>Paso 3: Primera Ejecución</h5>
+                            <ol>
+                                <li>Hacer doble clic en <code>INICIAR_DEPOSITO.bat</code></li>
+                                <li>Verificar que aparezca la ventana del sistema</li>
+                                <li>Comprobar conexión a base de datos</li>
+                                <li>Probar carga de pedidos con el botón "Cargar"</li>
+                            </ol>
+                            
+                            <div class="alert alert-success">
+                                <i class="bi bi-check-circle"></i> 
+                                <strong>¡Listo!</strong> El sistema DEPÓSITO está configurado y funcionando.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CABA Instructions -->
+                <div id="caba-instructions" style="display: none;">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="bi bi-geo-alt"></i> Instalación - Versión CABA</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="alert alert-warning">
+                                <i class="bi bi-exclamation-triangle"></i> 
+                                <strong>Importante:</strong> Esta versión requiere conexión a servidores remotos. Verificar conectividad de red.
+                            </div>
+                            
+                            <h5>Paso 1: Descargar Archivos</h5>
+                            <ol>
+                                <li>Descargar <code>DISTRIBUCION_CABA.zip</code></li>
+                                <li>Extraer en una carpeta (ej: <code>C:\MundoOutdoor\</code>)</li>
+                                <li>Verificar que contenga:
+                                    <ul>
+                                        <li><code>Cliente_Matias_GUI_v3_CABA.exe</code></li>
+                                        <li><code>INICIAR_CABA.bat</code></li>
+                                        <li><code>README_CABA.txt</code></li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            
+                            <h5>Paso 2: Verificar Conectividad</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>Probar SQL Server:</h6>
+                                    <pre class="bg-dark text-light p-2 rounded">
+Test-NetConnection 192.168.1.14 -Port 1433</pre>
+                                    <small class="text-muted">Debe devolver: TcpTestSucceeded : True</small>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>Probar API Dragonfish:</h6>
+                                    <pre class="bg-dark text-light p-2 rounded">
+ping 190.211.201.217</pre>
+                                    <small class="text-muted">Debe responder sin pérdida de paquetes</small>
+                                </div>
+                            </div>
+                            
+                            <h5>Paso 3: Configuración de Red</h5>
+                            <div class="alert alert-info">
+                                <h6>Configuración Automática:</h6>
+                                <p>La versión CABA viene preconfigurada con:</p>
+                                <ul class="mb-0">
+                                    <li><strong>SQL Server:</strong> 192.168.1.14,1433</li>
+                                    <li><strong>Base de datos:</strong> DRAGONFISH_MUNDOCAB</li>
+                                    <li><strong>Usuario SQL:</strong> cliente_app</li>
+                                    <li><strong>API Dragonfish:</strong> http://190.211.201.217:8009</li>
+                                </ul>
+                            </div>
+                            
+                            <h5>Paso 4: Primera Ejecución</h5>
+                            <ol>
+                                <li>Hacer doble clic en <code>INICIAR_CABA.bat</code></li>
+                                <li>Verificar conexión a SQL Server remoto</li>
+                                <li>Comprobar acceso a API Dragonfish</li>
+                                <li>Probar carga de pedidos CABA</li>
+                            </ol>
+                            
+                            <div class="alert alert-success">
+                                <i class="bi bi-check-circle"></i> 
+                                <strong>¡Perfecto!</strong> El sistema CABA está conectado y funcionando.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Printer Configuration -->
+<section class="py-5" id="impresora">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="bi bi-printer"></i> Configuración de Impresora</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>Impresora ZPL Requerida</h5>
+                                <p>El sistema requiere una impresora compatible con lenguaje ZPL para etiquetas de envío.</p>
+                                
+                                <h6>Modelos Recomendados:</h6>
+                                <ul>
+                                    <li>Zebra ZD420</li>
+                                    <li>Zebra ZD620</li>
+                                    <li>Zebra GK420d</li>
+                                    <li>Cualquier impresora ZPL compatible</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>Configuración</h5>
+                                <ol>
+                                    <li>Instalar drivers de la impresora</li>
+                                    <li>Configurar como impresora predeterminada</li>
+                                    <li>Verificar que acepta comandos ZPL</li>
+                                    <li>Probar impresión desde el sistema</li>
+                                </ol>
+                                
+                                <div class="alert alert-info mt-3">
+                                    <i class="bi bi-info-circle"></i> 
+                                    El sistema detecta automáticamente la impresora ZPL configurada.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Troubleshooting -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center mb-4">Problemas Comunes de Instalación</h2>
+                
+                <div class="accordion" id="troubleshootingAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#error1">
+                                Error de conexión SQL Server
+                            </button>
+                        </h2>
+                        <div id="error1" class="accordion-collapse collapse" data-bs-parent="#troubleshootingAccordion">
+                            <div class="accordion-body">
+                                <strong>Síntomas:</strong> "Login failed" o "Server not found"<br>
+                                <strong>Solución:</strong>
+                                <ol>
+                                    <li>Verificar que SQL Server esté ejecutándose</li>
+                                    <li>Comprobar firewall (puerto 1433)</li>
+                                    <li>Verificar credenciales de usuario SQL</li>
+                                    <li>Probar conectividad con <code>Test-NetConnection</code></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#error2">
+                                Error de API Dragonfish
+                            </button>
+                        </h2>
+                        <div id="error2" class="accordion-collapse collapse" data-bs-parent="#troubleshootingAccordion">
+                            <div class="accordion-body">
+                                <strong>Síntomas:</strong> "Connection timeout" o "API not responding"<br>
+                                <strong>Solución:</strong>
+                                <ol>
+                                    <li>Verificar conexión a internet</li>
+                                    <li>Comprobar que la IP sea accesible</li>
+                                    <li>Revisar configuración de proxy/firewall</li>
+                                    <li>Contactar administrador de red</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#error3">
+                                Impresora no detectada
+                            </button>
+                        </h2>
+                        <div id="error3" class="accordion-collapse collapse" data-bs-parent="#troubleshootingAccordion">
+                            <div class="accordion-body">
+                                <strong>Síntomas:</strong> "No ZPL printer found"<br>
+                                <strong>Solución:</strong>
+                                <ol>
+                                    <li>Verificar que la impresora esté encendida</li>
+                                    <li>Instalar drivers correctos</li>
+                                    <li>Configurar como impresora predeterminada</li>
+                                    <li>Verificar compatibilidad ZPL</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Support -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="mb-4">¿Necesitas Ayuda?</h2>
+                <p class="lead text-muted mb-4">Nuestro equipo de soporte está disponible para ayudarte con la instalación.</p>
+                
+                <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                    <a href="{{ url_for('problemas') }}" class="btn btn-primary">
+                        <i class="bi bi-question-circle"></i> Guía de Problemas
+                    </a>
+                    <a href="mailto:soporte@mundooutdoor.com" class="btn btn-outline-primary">
+                        <i class="bi bi-envelope"></i> Contactar Soporte
+                    </a>
+                    <a href="{{ url_for('guia_rapida') }}" class="btn btn-outline-secondary">
+                        <i class="bi bi-lightning"></i> Guía Rápida
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+function showDepositoInstructions() {
+    document.getElementById('deposito-instructions').style.display = 'block';
+    document.getElementById('caba-instructions').style.display = 'none';
+    document.getElementById('instructions').scrollIntoView({ behavior: 'smooth' });
+}
+
+function showCabaInstructions() {
+    document.getElementById('caba-instructions').style.display = 'block';
+    document.getElementById('deposito-instructions').style.display = 'none';
+    document.getElementById('instructions').scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+{% endblock %}

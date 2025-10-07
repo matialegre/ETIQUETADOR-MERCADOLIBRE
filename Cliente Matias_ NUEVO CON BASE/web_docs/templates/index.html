@@ -1,0 +1,267 @@
+{% extends "base.html" %}
+
+{% block title %}Mundo Outdoor - Sistema de Picking Profesional{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="fade-in"><i class="bi bi-mountains"></i> Mundo Outdoor</h1>
+                <p class="lead fade-in">Manual de Usuario - Sistema de Picking</p>
+                <p class="fade-in">Guía completa para el uso del sistema de picking interno de Mundo Outdoor</p>
+                <div class="mt-4 fade-in">
+                    <a href="{{ url_for('guia_practica') }}" class="btn btn-light btn-lg me-3">
+                        <i class="bi bi-play-circle"></i> Comenzar Tutorial
+                    </a>
+                    <a href="{{ url_for('picking') }}" class="btn btn-outline-light btn-lg">
+                        <i class="bi bi-book"></i> Manual Completo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-5 fw-bold mb-3">¿Por qué elegir nuestro sistema?</h2>
+                <p class="lead text-muted">Diseñado específicamente para empresas de outdoor y deportes, con funcionalidades avanzadas y fácil uso.</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="feature-icon">
+                            <i class="bi bi-lightning-charge"></i>
+                        </div>
+                        <h5 class="card-title">Picking Rápido</h5>
+                        <p class="card-text">Escaneo de códigos de barras, filtros inteligentes y flujo optimizado para maximizar la velocidad de picking.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="feature-icon">
+                            <i class="bi bi-boxes"></i>
+                        </div>
+                        <h5 class="card-title">Gestión de Inventario</h5>
+                        <p class="card-text">Control automático de stock, movimientos en tiempo real y sincronización con MercadoLibre.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="feature-icon">
+                            <i class="bi bi-printer"></i>
+                        </div>
+                        <h5 class="card-title">Etiquetas Automáticas</h5>
+                        <p class="card-text">Impresión automática de etiquetas de envío y generación de reportes en PDF.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-3">
+                <div class="card border-0 bg-transparent">
+                    <div class="card-body">
+                        <h3 class="display-4 fw-bold text-primary">99%</h3>
+                        <p class="text-muted">Precisión en Picking</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 bg-transparent">
+                    <div class="card-body">
+                        <h3 class="display-4 fw-bold text-primary">50%</h3>
+                        <p class="text-muted">Reducción de Tiempo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 bg-transparent">
+                    <div class="card-body">
+                        <h3 class="display-4 fw-bold text-primary">24/7</h3>
+                        <p class="text-muted">Operación Continua</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 bg-transparent">
+                    <div class="card-body">
+                        <h3 class="display-4 fw-bold text-primary">100+</h3>
+                        <p class="text-muted">Pedidos por Hora</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How it Works Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-5 fw-bold mb-3">¿Cómo funciona?</h2>
+                <p class="lead text-muted">Proceso simple y eficiente en 4 pasos</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="text-center">
+                    <div class="step-number mx-auto">1</div>
+                    <h5>Cargar Pedidos</h5>
+                    <p class="text-muted">El sistema sincroniza automáticamente con MercadoLibre y carga todos los pedidos pendientes.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="text-center">
+                    <div class="step-number mx-auto">2</div>
+                    <h5>Filtrar y Organizar</h5>
+                    <p class="text-muted">Aplica filtros por depósito, fecha, estado y organiza los pedidos por prioridad.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="text-center">
+                    <div class="step-number mx-auto">3</div>
+                    <h5>Escanear y Pickear</h5>
+                    <p class="text-muted">Escanea códigos de barras, valida productos y completa el picking de manera eficiente.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="text-center">
+                    <div class="step-number mx-auto">4</div>
+                    <h5>Imprimir y Enviar</h5>
+                    <p class="text-muted">Genera etiquetas de envío automáticamente y actualiza el stock en tiempo real.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Versions Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-5 fw-bold mb-3">Versiones Disponibles</h2>
+                <p class="lead text-muted">Configuraciones específicas para cada ubicación</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="bi bi-building"></i> Versión DEPÓSITO</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-check-circle text-success"></i> Base de datos local</li>
+                            <li><i class="bi bi-check-circle text-success"></i> API Dragonfish local</li>
+                            <li><i class="bi bi-check-circle text-success"></i> Filtros: DEPO, MUNDOAL, MTGBBL, BBPS, MONBAHIA, MTGBBPS</li>
+                            <li><i class="bi bi-check-circle text-success"></i> Configuración estándar</li>
+                        </ul>
+                        <a href="{{ url_for('instalacion') }}#deposito" class="btn btn-outline-primary">
+                            <i class="bi bi-download"></i> Descargar DEPÓSITO
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="bi bi-geo-alt"></i> Versión CABA</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-check-circle text-success"></i> SQL Server remoto</li>
+                            <li><i class="bi bi-check-circle text-success"></i> API Dragonfish remota</li>
+                            <li><i class="bi bi-check-circle text-success"></i> Filtros: CAB, CABA, MUNDOCAB</li>
+                            <li><i class="bi bi-check-circle text-success"></i> Configuración específica CABA</li>
+                        </ul>
+                        <a href="{{ url_for('instalacion') }}#caba" class="btn btn-outline-primary">
+                            <i class="bi bi-download"></i> Descargar CABA
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="display-5 fw-bold mb-3">¿Listo para optimizar tu picking?</h2>
+                <p class="lead text-muted mb-4">Comienza a usar el sistema más avanzado para gestión de pedidos y picking.</p>
+                <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                    <a href="{{ url_for('guia_rapida') }}" class="btn btn-primary btn-lg">
+                        <i class="bi bi-lightning"></i> Guía Rápida
+                    </a>
+                    <a href="{{ url_for('instalacion') }}" class="btn btn-outline-primary btn-lg">
+                        <i class="bi bi-download"></i> Descargar Sistema
+                    </a>
+                    <a href="{{ url_for('problemas') }}" class="btn btn-outline-secondary btn-lg">
+                        <i class="bi bi-question-circle"></i> ¿Necesitas Ayuda?
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Updates -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h3 class="text-center mb-4">Últimas Actualizaciones</h3>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start">
+                            <div class="badge bg-success me-3 mt-1">v3.0</div>
+                            <div>
+                                <h6 class="mb-1">Sistema de Picking v3.0</h6>
+                                <p class="text-muted mb-2">Enero 2025</p>
+                                <ul class="list-unstyled mb-0">
+                                    <li>✅ Soporte para packs multiventa</li>
+                                    <li>✅ Filtros avanzados por depósito</li>
+                                    <li>✅ Impresión automática de etiquetas</li>
+                                    <li>✅ Configuración específica CABA</li>
+                                    <li>✅ Interfaz mejorada y más intuitiva</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
